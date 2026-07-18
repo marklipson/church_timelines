@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Early Church People</title>
+    <!-- defines 'people' -->
+    <script src="people.js"></script>
+    <!-- defines 'relationships' -->
+    <script src="relationships.js"></script>
+    <!-- draws timeline -->
+    <script src="draw.js"></script>
+    <style>
+        body {
+          margin: 16px;
+          display: flex;
+          flex-direction: column;
+          min-height: 95vh; /* Takes full viewport height */
+        }
+        h1 {
+          flex-grow: 0;
+        }
+        #timeline_area {
+          flex-grow: 1;
+          min-height: 0;
+          padding: 8px;
+          background-color: #e0e0e6;
+          position: relative;
+          width: 100%;
+          height: 100%;
+          overflow-x: auto;
+          overflow-y: auto;
+        }
+        #timeline_area > span {
+          position: absolute;
+        }
+        .time_axis {
+          font-weight: bold;
+          transform: translateX(-80%);
+        }
+        .person {
+          font-size: 90%;
+          border: solid 1px #808080;
+          background-color: #d0d0d0;
+          text-align: center;
+          cursor: pointer;
+        }
+        .person.cat_missionary {
+          background-color: #c0d0c0;
+        }
+        .person.cat_writer {
+          background-color: #c0f0e0;
+        }
+        .person.cat_monk {
+          background-color: #c0c0c8;
+        }
+        .person.cat_bishop {
+          background-color: #e0ffe0;
+        }
+        .person.cat_emperor {
+          background-color: #a0b0e0;
+        }
+        .person.cat_evangelist {
+          background-color: #f8e0f0;
+        }
+        .person.cat_apostle {
+          background-color: #ffe8e0;
+        }
+        .person.cat_son_of_god {
+          background-color: white;
+          font-weight: bold;
+          border-width: 2px;
+          box-shadow: 0 0 12px #fff,
+              0 0 15px #ffea00,
+              0 0 20px #ffaa00;        }
+        .person.cat_mother_of_god {
+          background-color: #c0e0ff;
+          border-width: 2px;
+          font-weight: bold;
+
+        }
+        span.martyr {
+          font-size: 80%;
+          margin-left: 6px;
+          color: red;
+        }
+        span.writer {
+          font-size: 80%;
+          margin-left: 6px;
+          color: green;
+        }
+        span.bishop {
+          font-size: 80%;
+          margin-left: 6px;
+          color: #808080;
+        }
+        span.missionary {
+          font-size: 80%;
+          margin-left: 6px;
+          color: #80a080;
+        }
+        span.monk {
+          font-size: 80%;
+          margin-left: 6px;
+          color: #808080;
+        }
+        span.emperor {
+          font-size: 80%;
+          margin-left: 6px;
+          color: #f0f080;
+        }
+    </style>
+</head>
+<body>
+  <h1>Early Church People</h1>
+  <div id="timeline_area">
+  </div>
+</body>
+<script>
+  const timeline = new Timeline("timeline_area", [-20, 325]);
+  timeline.draw();
+</script>
+</html>
