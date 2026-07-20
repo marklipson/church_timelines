@@ -6,13 +6,25 @@ class Timeline
   constructor(div_id, time_range)
   {
     this.div = document.getElementById(div_id);
+    this.svg = null;
     this.time_range = time_range;
     this.time_step = 10;
+    this.top_to_bottom = true;
+    this.timeline_y = 10;
+    this.pix_per_year = 8;
   }
 
   year_x(year)
   {
-    return 16 + (year - this.time_range[0]) * 7;
+    return 16 + (year - this.time_range[0]) * this.pix_per_year;
+  }
+
+  slot_y(slot)
+  {
+    if (this.top_to_bottom)
+      return 50 + slot * 24;
+    else
+      return 50 + slot * 24;
   }
 
   draw_years()
@@ -22,7 +34,10 @@ class Timeline
         const el = document.createElement("span");
         this.div.appendChild(el);
         el.innerText = `${year}`;
-        el.style.bottom = 10 + "px";
+        if (this.top_to_bottom)
+          el.style.top = this.timeline_y + "px";
+        else
+          el.style.bottom = this.timeline_y + "px";
         el.style.left = this.year_x(year) + "px";
         el.classList.add("time_axis")
     }
@@ -30,7 +45,7 @@ class Timeline
 
   draw_people()
   {
-    let slot_end = [];
+    let slot_end = [-10, 33];
     for (const person of people)
     {
         //if (! core_figures.includes(person.name))
@@ -40,6 +55,7 @@ class Timeline
         const el = document.createElement("span");
         this.div.appendChild(el);
         el.innerText = person.name;
+        el.setAttribute("id", "p_" + person.name.replaceAll(' ', '_'));
         if (person.category.includes("martyr"))
         {
           el.innerHTML += "<span class='martyr' title='martyr'>&#9840;</span>";
@@ -78,7 +94,10 @@ class Timeline
           if (birth > slot_end[use_slot] + 2)
             break;
         }
-        el.style.bottom = (50 + use_slot * 23) + "px";
+        if (this.top_to_bottom)
+          el.style.top = this.slot_y(use_slot) + "px";
+        else
+          el.style.bottom = this.slot_y(use_slot) + "px";
         el.style.left = this.year_x(birth) + "px";
         el.style.width = (this.year_x(death) - this.year_x(birth)) + "px";
         el.setAttribute("title", person.biography)
@@ -91,10 +110,142 @@ class Timeline
     }
   }
 
-  // A standard instance method
+  find_person(name)
+  {
+    const el = document.getElementById("p_" + name.replaceAll(' ', '_'));
+    if (el)
+      return [el];
+    return [];
+  }
+
+  find_person_rec(name)
+  {
+    for (const rec of people)
+    {
+      if (rec.name == name)
+        return rec;
+    }
+  }
+
+  set_selection(name)
+  {
+    this.clear_selection();
+    // show as selected
+    const p_focus = this.find_person(name);
+    if (! p_focus)
+      return;
+    const person_el = p_focus[0];
+    const person_rec = this.find_person_rec(name);
+    person_el.classList.add("selected");
+    // highlight all relations
+    let rel_detail = "";
+    for (const rel of relationships)
+    {
+      if (rel.from == name)
+      {
+        const p_to = this.find_person_rec(rel.to);
+        this.find_person(rel.to).forEach(elem=>elem.classList.add("highlighted"));
+        const rel_txt = relationship_text?.[rel.relationship]??(rel.relationship.replaceAll('_', ' ') + ':');
+        if (p_to)
+          rel_detail += `<li>${rel_txt} <b>${p_to.name}</b>. ${rel?.description??""}</li>`
+      }
+      if (rel.to == name)
+      {
+        const p_from = this.find_person_rec(rel.from);
+        this.find_person(rel.from).forEach(elem=>elem.classList.add("highlighted"));
+        const rel_inv = relationship_inverse?.[rel.relationship]??"related to";
+        if (p_from)
+          rel_detail += `<li>${rel_inv} <b>${p_from.name}</b>. ${rel?.description??""}</li>`
+      }
+    }
+    // show detail pane
+    const details = document.createElement("div");
+    details.classList.add("detail_pane");
+    // - title
+    const d_title = document.createElement("h2");
+    d_title.innerText = person_rec.name;
+    details.appendChild(d_title);
+    // - image
+    const img_url = person_rec?.image??"";
+    if (img_url)
+    {
+        const e_img = document.createElement("img");
+        e_img.setAttribute("src", "images/" + img_url);
+        e_img.setAttribute("width", "200");
+        e_img.style.align = "center";
+        details.appendChild(e_img);
+    }
+    // - bio
+    const bio = document.createElement("p");
+    bio.innerText = person_rec.biography;
+    details.appendChild(bio);
+    // - relationships
+    const rels = document.createElement("ul");
+    rels.innerHTML = rel_detail;
+    details.appendChild(rels);
+    //this.div.appendChild(details);
+    document.body.appendChild(details);
+  }
+
+  clear_selection()
+  {
+    // remove all selections and highlights
+    for (const elem of document.getElementsByClassName("person"))
+    {
+      elem.classList.remove("selected");
+      elem.classList.remove("highlighted");
+    }
+    // remove detail pane
+    for (const elem of document.getElementsByClassName("detail_pane"))
+    {
+      elem.parentElement.removeChild(elem);
+    }
+  }
+
+  setup_selection()
+  {
+    const self = this;
+    for (const elem of document.getElementsByClassName("person"))
+    {
+      elem.addEventListener("click", function(evt) {
+        evt.stopPropagation();
+        let el = evt.target;
+        if (! el.classList.contains("person"))
+          el = el.parentElement;
+        const p_name = el.getAttribute("id").substr(2).replaceAll('_', ' ');
+        self.set_selection(p_name);
+        // click anywhere or press esc to clear selection (or scroll?)
+        const controller = new AbortController();
+        const do_close = function(e) {
+          self.clear_selection();
+          controller.abort();
+        };
+        // - click anywhere
+        window.addEventListener("click", do_close, { signal: controller.signal });
+        // - ESC key
+        window.addEventListener("keydown", function(e) {
+          if (e.key == 'Escape')
+            do_close()
+        }, { signal: controller.signal });
+        // - scroll timeline
+        //  NOT closing on scroll--it's nice to scroll to see the relationships
+        //self.div.addEventListener("scroll", do_close, { signal: controller.signal });
+        return false;
+      });
+    }
+  }
+
   draw()
   {
     this.draw_years();
     this.draw_people();
   }
+
 }
+
+/*  TODOs
+ *
+ *    vertical bars for persecutions, councils, other timeline events
+ *    edit all AI-generated bios
+ *    filter buttons, i.e. for heretics, apostles, writers, martyrs, ...
+ */

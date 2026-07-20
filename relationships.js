@@ -2,7 +2,7 @@ const relationships = [
   {
     "from": "Peter",
     "to": "Linus",
-    "relationship": "appointed_or_designated_successor",
+    "relationship": "successor_of",
     "church": "Rome",
     "relationship_confidence": "medium",
     "basis": "early_church_tradition",
@@ -31,7 +31,7 @@ const relationships = [
     "to": "Evodius of Antioch",
     "relationship": "appointed_or_designated_successor",
     "church": "Antioch",
-    "relationship_confidence": "medium",
+    "relationship_confidence": "low",
     "basis": "early_church_tradition",
     "description": "Evodius is traditionally regarded as Peter's successor as leader or bishop of Antioch."
   },
@@ -40,7 +40,7 @@ const relationships = [
     "to": "Ignatius of Antioch",
     "relationship": "successor_of",
     "church": "Antioch",
-    "relationship_confidence": "high",
+    "relationship_confidence": "medium",
     "basis": "early_church_tradition",
     "description": "Ignatius is traditionally regarded as the successor of Evodius as bishop of Antioch."
   },
@@ -54,7 +54,7 @@ const relationships = [
     "description": "Hero is traditionally regarded as the successor of Ignatius at Antioch."
   },
   {
-    "from": "James the brother of Jesus",
+    "from": "James the brother of the Lord",
     "to": "Simeon of Jerusalem",
     "relationship": "successor_of",
     "church": "Jerusalem",
@@ -65,7 +65,7 @@ const relationships = [
   {
     "from": "John",
     "to": "Polycarp of Smyrna",
-    "relationship": "disciple_of",
+    "relationship": "teacher_to_disciple",
     "church": "Smyrna",
     "relationship_confidence": "high",
     "basis": "Irenaeus_and_early_tradition",
@@ -74,7 +74,7 @@ const relationships = [
   {
     "from": "Polycarp of Smyrna",
     "to": "Irenaeus of Lyons",
-    "relationship": "disciple_of",
+    "relationship": "teacher_to_disciple",
     "church": "Smyrna / Lyons",
     "relationship_confidence": "high",
     "basis": "Irenaeus_personal_testimony",
@@ -83,7 +83,7 @@ const relationships = [
   {
     "from": "John",
     "to": "Papias of Hierapolis",
-    "relationship": "apostolic_association",
+    "relationship": "teacher_to_student",
     "church": "Asia Minor",
     "relationship_confidence": "medium",
     "basis": "early_church_tradition",
@@ -92,7 +92,7 @@ const relationships = [
   {
     "from": "Peter",
     "to": "Mark",
-    "relationship": "missionary_companion_and_source",
+    "relationship": "missionary_companion",
     "church": "Rome",
     "relationship_confidence": "high",
     "basis": "early_church_tradition",
@@ -119,11 +119,11 @@ const relationships = [
   {
     "from": "Barnabas",
     "to": "Mark",
-    "relationship": "missionary_companion_and_relative",
+    "relationship": "missionary_companion",
     "church": "Cyprus / Eastern Mediterranean",
     "relationship_confidence": "high",
     "basis": "New_Testament",
-    "description": "Barnabas took Mark with him on missionary work after Mark's separation from Paul's group."
+    "description": "Barnabas took his cousin Mark with him on missionary work after Mark's separation from Paul's group."
   },
   {
     "from": "Paul",
@@ -137,16 +137,25 @@ const relationships = [
   {
     "from": "Paul",
     "to": "Timothy",
-    "relationship": "missionary_companion_and_mentored_leader",
+    "relationship": "missionary_companion",
     "church": "Ephesus",
     "relationship_confidence": "high",
     "basis": "New_Testament",
     "description": "Timothy was Paul's close co-worker and a major leader in the Pauline missionary network."
   },
   {
+    "from": "Timothy",
+    "to": "Onesimus",
+    "relationship": "successor_of",
+    "church": "Ephesus",
+    "relationship_confidence": "traditional",
+    "basis": "tradition",
+    "description": "Onesimus was bishop of Ephesus after Timothy."
+  },
+  {
     "from": "Paul",
     "to": "Titus",
-    "relationship": "missionary_companion_and_mentored_leader",
+    "relationship": "missionary_companion",
     "church": "Crete",
     "relationship_confidence": "high",
     "basis": "New_Testament",
@@ -155,7 +164,7 @@ const relationships = [
   {
     "from": "Paul",
     "to": "Tychicus",
-    "relationship": "missionary_companion_and_messenger",
+    "relationship": "missionary_companion",
     "church": "Eastern Mediterranean",
     "relationship_confidence": "high",
     "basis": "New_Testament",
@@ -182,7 +191,7 @@ const relationships = [
   {
     "from": "Aquila",
     "to": "Priscilla",
-    "relationship": "spouse_and_missionary_partner",
+    "relationship": "spouse",
     "church": "Corinth / Ephesus / Rome",
     "relationship_confidence": "high",
     "basis": "New_Testament",
@@ -200,7 +209,7 @@ const relationships = [
   {
     "from": "Paul",
     "to": "Crispus",
-    "relationship": "convert_and_church_leader",
+    "relationship": "converted",
     "church": "Corinth",
     "relationship_confidence": "high",
     "basis": "New_Testament",
@@ -209,7 +218,7 @@ const relationships = [
   {
     "from": "Paul",
     "to": "Gaius of Corinth",
-    "relationship": "convert_and_host",
+    "relationship": "converted",
     "church": "Corinth",
     "relationship_confidence": "high",
     "basis": "New_Testament",
@@ -218,38 +227,11 @@ const relationships = [
   {
     "from": "Paul",
     "to": "Dionysius the Areopagite",
-    "relationship": "evangelist_and_convert",
+    "relationship": "converted",
     "church": "Athens",
     "relationship_confidence": "high",
     "basis": "New_Testament",
     "description": "Dionysius is named in Acts as a convert associated with Paul's preaching in Athens."
-  },
-  {
-    "from": "John",
-    "to": "Simeon of Jerusalem",
-    "relationship": "apostolic_association",
-    "church": "Jerusalem",
-    "relationship_confidence": "medium",
-    "basis": "early_church_tradition",
-    "description": "Simeon belonged to the generation directly connected with the apostolic leadership of the Jerusalem church."
-  },
-  {
-    "from": "Peter",
-    "to": "Clement of Rome",
-    "relationship": "apostolic_association",
-    "church": "Rome",
-    "relationship_confidence": "medium",
-    "basis": "early_church_tradition",
-    "description": "Clement is associated by early tradition with the apostolic generation and the Roman church founded by Peter and Paul."
-  },
-  {
-    "from": "Clement of Rome",
-    "to": "Ignatius of Antioch",
-    "relationship": "apostolic_father_generation",
-    "church": "Rome / Antioch",
-    "relationship_confidence": "low",
-    "basis": "chronological_and_ecclesiastical_association",
-    "description": "Clement and Ignatius belong to the earliest generation of post-apostolic bishops, though a direct personal relationship is not established."
   },
   {
     "from": "Ignatius of Antioch",
@@ -277,6 +259,24 @@ const relationships = [
     "relationship_confidence": "high",
     "basis": "personal_testimony_of_Irenaeus",
     "description": "Irenaeus explicitly remembered hearing Polycarp and the traditions he had received from the apostolic generation."
+  },
+  {
+    "from": "Origen of Alexandria",
+    "to": "Dionysius of Alexandria",
+    "relationship": "teacher_to_student",
+    "church": "Alexandria",
+    "relationship_confidence": "high",
+    "basis": "",
+    "description": "Dionysius studied under Origen."
+  },
+  {
+    "from": "Origen of Alexandria",
+    "to": "Gregory Thaumaturgus",
+    "relationship": "teacher_to_student",
+    "church": "Alexandria",
+    "relationship_confidence": "high",
+    "basis": "",
+    "description": "Gregory studied under Origen."
   },
   {
     "from": "Mark",
@@ -342,15 +342,6 @@ const relationships = [
     "description": "Papias and Irenaeus belong to overlapping chains of transmission preserving apostolic traditions, though a direct personal relationship is not established."
   },
   {
-    "from": "Papias of Hierapolis",
-    "to": "John",
-    "relationship": "apostolic_association",
-    "church": "Asia Minor",
-    "relationship_confidence": "medium",
-    "basis": "Papias_fragments_and_early_tradition",
-    "description": "Papias refers to traditions connected with apostolic witnesses and is associated with the Johannine circle."
-  },
-  {
     "from": "Quadratus of Athens",
     "to": "Aristides of Athens",
     "relationship": "shared_apologetic_tradition",
@@ -361,40 +352,40 @@ const relationships = [
   },
   {
     "from": "Justin Martyr",
-    "to": "Irenaeus of Lyons",
-    "relationship": "intellectual_and_apologetic_predecessor",
-    "church": "Rome / Lyons",
+    "to": "Tatian the Syrian",
+    "relationship": "teacher_to_student",
+    "church": "",
     "relationship_confidence": "medium",
-    "basis": "shared_christian_intellectual_tradition",
-    "description": "Justin's apologetic and theological work formed part of the Christian intellectual tradition inherited by later writers such as Irenaeus."
+    "basis": "",
+    "description": ""
   },
 
   {
-    "from": "Jesus",
+    "from": "Jesus Christ",
     "to": "Peter",
-    "relationship": "apostle_and_leading_disciple",
+    "relationship": "apostle_and_disciple",
     "relationship_confidence": "high",
     "basis": "New_Testament",
     "description": "One of the Twelve and a leading apostolic witness; prominently associated with Jesus during his ministry."
   },
   {
-    "from": "Jesus",
+    "from": "Jesus Christ",
     "to": "John",
-    "relationship": "apostle_and_leading_disciple",
+    "relationship": "apostle_and_disciple",
     "relationship_confidence": "high",
     "basis": "New_Testament",
     "description": "One of the Twelve and a member of the inner circle of disciples."
   },
   {
-    "from": "Jesus",
-    "to": "James the brother of Jesus",
+    "from": "Jesus Christ",
+    "to": "James the brother of the Lord",
     "relationship": "brother_and_post_resurrection_witness",
     "relationship_confidence": "high",
     "basis": "New_Testament_and_early_tradition",
     "description": "James was a close relative of Jesus and became a leading figure in the Jerusalem church after the Resurrection."
   },
   {
-    "from": "Jesus",
+    "from": "Jesus Christ",
     "to": "Paul",
     "relationship": "post_resurrection_appearance_and_apostolic_commission",
     "relationship_confidence": "high",
@@ -402,7 +393,7 @@ const relationships = [
     "description": "Paul claimed to have encountered the risen Christ and received his apostolic commission from him."
   },
   {
-    "from": "Jesus",
+    "from": "Jesus Christ",
     "to": "Matthew",
     "relationship": "apostle_and_disciple",
     "relationship_confidence": "high",
@@ -410,7 +401,7 @@ const relationships = [
     "description": "One of the Twelve and a disciple called by Jesus during his earthly ministry."
   },
   {
-    "from": "Jesus",
+    "from": "Jesus Christ",
     "to": "Andrew",
     "relationship": "apostle_and_disciple",
     "relationship_confidence": "high",
@@ -418,7 +409,15 @@ const relationships = [
     "description": "One of the Twelve and an early disciple of Jesus."
   },
   {
-    "from": "Jesus",
+    "from": "Jesus Christ",
+    "to": "James son of Zebedee",
+    "relationship": "apostle_and_disciple",
+    "relationship_confidence": "high",
+    "basis": "New_Testament",
+    "description": "One of the Twelve and a disciple called by Jesus during his earthly ministry."
+  },
+  {
+    "from": "Jesus Christ",
     "to": "Thomas",
     "relationship": "apostle_and_disciple",
     "relationship_confidence": "high",
@@ -426,7 +425,7 @@ const relationships = [
     "description": "One of the Twelve and a prominent witness to the Resurrection."
   },
   {
-    "from": "Jesus",
+    "from": "Jesus Christ",
     "to": "Philip",
     "relationship": "apostle_and_disciple",
     "relationship_confidence": "high",
@@ -434,7 +433,7 @@ const relationships = [
     "description": "One of the Twelve, called directly by Jesus in the Gospel tradition."
   },
   {
-    "from": "Jesus",
+    "from": "Jesus Christ",
     "to": "Bartholomew",
     "relationship": "apostle_and_disciple",
     "relationship_confidence": "high",
@@ -442,7 +441,7 @@ const relationships = [
     "description": "One of the Twelve."
   },
   {
-    "from": "Jesus",
+    "from": "Jesus Christ",
     "to": "James son of Alphaeus",
     "relationship": "apostle_and_disciple",
     "relationship_confidence": "high",
@@ -450,7 +449,7 @@ const relationships = [
     "description": "One of the Twelve."
   },
   {
-    "from": "Jesus",
+    "from": "Jesus Christ",
     "to": "Jude / Thaddeus",
     "relationship": "apostle_and_disciple",
     "relationship_confidence": "high",
@@ -458,7 +457,7 @@ const relationships = [
     "description": "One of the Twelve, though the identification of the various New Testament figures named Jude or Judas is complex."
   },
   {
-    "from": "Jesus",
+    "from": "Jesus Christ",
     "to": "Simon the Zealot",
     "relationship": "apostle_and_disciple",
     "relationship_confidence": "high",
@@ -466,7 +465,7 @@ const relationships = [
     "description": "One of the Twelve."
   },
   {
-    "from": "Jesus",
+    "from": "Jesus Christ",
     "to": "Matthias",
     "relationship": "post_resurrection_apostolic_witness",
     "relationship_confidence": "medium",
@@ -474,7 +473,7 @@ const relationships = [
     "description": "A witness to the Resurrection who was later chosen to replace Judas Iscariot among the Twelve."
   },
   {
-    "from": "Jesus",
+    "from": "Jesus Christ",
     "to": "Mary the Theotokos",
     "relationship": "son_and_mother",
     "relationship_confidence": "high",
@@ -482,211 +481,306 @@ const relationships = [
     "description": "Mary was the mother of Jesus and a member of the apostolic community after the Resurrection."
   },
   {
-    "from": "Jesus",
+    "from": "Jesus Christ",
+    "to": "James the brother of the Lord",
+    "relationship": "relative",
+    "relationship_confidence": "high",
+    "basis": "New_Testament_and_early_tradition",
+    "description": "Step-brother or cousin of Jesus."
+  },
+  {
+    "from": "Jesus Christ",
     "to": "Barnabas",
     "relationship": "post_resurrection_apostolic_tradition",
     "relationship_confidence": "low",
     "basis": "early_church_tradition",
-    "description": "Barnabas was a major missionary of the first Christian generation; a direct personal relationship with Jesus is not securely documented."
+    "description": "Barnabas was a major missionary of the first Christian generation, and one of the 70."
   },
   {
-    "from": "Jesus",
-    "to": "Luke",
-    "relationship": "apostolic_generation_association",
-    "relationship_confidence": "low",
-    "basis": "early_church_tradition",
-    "description": "Luke belonged to the generation immediately following the earthly ministry of Jesus and is traditionally associated with the apostolic witnesses."
-  },
-  {
-    "from": "Jesus",
-    "to": "Mark",
-    "relationship": "apostolic_generation_association",
-    "relationship_confidence": "medium",
-    "basis": "early_church_tradition",
-    "description": "Mark is traditionally associated with the apostolic generation and with the preaching of Peter."
-  },
-  {
-    "from": "Jesus",
-    "to": "Linus",
-    "relationship": "apostolic_successor_through_Peter",
-    "relationship_confidence": "medium",
-    "basis": "early_church_tradition",
-    "description": "Linus represents the first post-apostolic generation of church leadership traditionally connected to Jesus through Peter."
-  },
-  {
-    "from": "Jesus",
-    "to": "Anacletus / Cletus",
-    "relationship": "apostolic_successor_through_Peter_and_Linus",
-    "relationship_confidence": "medium",
-    "basis": "early_church_tradition",
-    "description": "Anacletus or Cletus belongs to the early Roman succession traditionally descending from Peter."
-  },
-  {
-    "from": "Jesus",
-    "to": "Clement of Rome",
-    "relationship": "apostolic_successor_through_Peter_and_Paul",
-    "relationship_confidence": "medium",
-    "basis": "early_church_tradition",
-    "description": "Clement represents the early post-apostolic Roman church and stands close to the apostolic generation."
-  },
-  {
-    "from": "Jesus",
-    "to": "Evodius of Antioch",
-    "relationship": "apostolic_successor_through_Peter",
-    "relationship_confidence": "medium",
-    "basis": "early_church_tradition",
-    "description": "Evodius is traditionally regarded as an early successor to Peter in the church of Antioch."
-  },
-  {
-    "from": "Jesus",
-    "to": "Ignatius of Antioch",
-    "relationship": "apostolic_successor_through_Evodius",
-    "relationship_confidence": "high",
-    "basis": "early_church_tradition",
-    "description": "Ignatius represents the second generation of episcopal leadership descending from the apostolic Church."
-  },
-  {
-    "from": "Jesus",
+    "from": "Jesus Christ",
     "to": "Simeon of Jerusalem",
-    "relationship": "apostolic_successor_through_James",
+    "relationship": "relative",
     "relationship_confidence": "high",
     "basis": "early_church_tradition",
     "description": "Simeon was traditionally a relative of Jesus and successor to James in the leadership of the Jerusalem church."
   },
   {
-    "from": "Jesus",
+    "from": "Jesus Christ",
+    "to": "Ignatius of Antioch",
+    "relationship": "traditional_association",
+    "relationship_confidence": "low",
+    "basis": "traditional",
+    "description": "According to tradition, Ignatius is the child Jesus held on his lap in Matthew 18:1-4."
+  },
+
+
+
+  {
+    "from": "Jesus Christ",
+    "to": "John the Baptist",
+    "relationship": "forerunner_and_baptizer",
+    "church": "Judea",
+    "relationship_confidence": "high",
+    "basis": "New_Testament",
+    "description": "John prepared the way for Christ, baptized Him, and publicly bore witness to His identity."
+  },
+  {
+    "from": "Jesus Christ",
+    "to": "Photini",
+    "relationship": "evangelized_and_became_disciple",
+    "church": "Samaria",
+    "relationship_confidence": "high",
+    "basis": "New_Testament_and_tradition",
+    "description": "Jesus encountered the Samaritan Woman at the well; she became a witness to Him and is traditionally known as Photini."
+  },
+  {
+    "from": "Jesus Christ",
+    "to": "Stephen",
+    "relationship": "post_resurrection_witness",
+    "church": "Jerusalem",
+    "relationship_confidence": "high",
+    "basis": "New_Testament",
+    "description": "Stephen was a prominent early Christian leader whose martyrdom included a vision of the glorified Christ."
+  },
+
+  {
+    "from": "Peter",
+    "to": "Mark",
+    "relationship": "spiritual_father_and_associate",
+    "church": "Rome",
+    "relationship_confidence": "high",
+    "basis": "early_church_tradition",
+    "description": "Early tradition calls Mark Peter's interpreter or close associate, and 1 Peter refers to Mark as Peter's son."
+  },
+  {
+    "from": "Paul",
+    "to": "Timothy",
+    "relationship": "spiritual_father_and_apostolic_delegate",
+    "church": "Ephesus / Eastern Mediterranean",
+    "relationship_confidence": "high",
+    "basis": "New_Testament",
+    "description": "Paul regarded Timothy as a beloved spiritual son and entrusted him with major pastoral responsibilities."
+  },
+  {
+    "from": "Paul",
+    "to": "Titus",
+    "relationship": "spiritual_father_and_apostolic_delegate",
+    "church": "Crete / Eastern Mediterranean",
+    "relationship_confidence": "high",
+    "basis": "New_Testament",
+    "description": "Paul referred to Titus as his true child in the faith and entrusted him with the organization of churches in Crete."
+  },
+  {
+    "from": "Paul",
+    "to": "Luke",
+    "relationship": "missionary_companion",
+    "church": "Eastern Mediterranean",
+    "relationship_confidence": "high",
+    "basis": "New_Testament",
+    "description": "The 'we' passages of Acts and early tradition associate Luke closely with Paul's missionary journeys."
+  },
+  {
+    "from": "Paul",
+    "to": "Apollos",
+    "relationship": "apostolic_association",
+    "church": "Corinth / Ephesus",
+    "relationship_confidence": "high",
+    "basis": "New_Testament",
+    "description": "Apollos was an important Christian teacher who worked within the missionary network associated with Paul, though he was not Paul's disciple in the strict sense."
+  },
+  {
+    "from": "Priscilla",
+    "to": "Apollos",
+    "relationship": "teacher_to_student",
+    "church": "Ephesus",
+    "relationship_confidence": "high",
+    "basis": "New_Testament",
+    "description": "Priscilla and Aquila instructed Apollos more accurately in the Christian faith."
+  },
+  {
+    "from": "Aquila",
+    "to": "Apollos",
+    "relationship": "teacher_to_student",
+    "church": "Ephesus",
+    "relationship_confidence": "high",
+    "basis": "New_Testament",
+    "description": "Aquila and Priscilla instructed Apollos in the Christian faith."
+  },
+  {
+    "from": "Paul",
+    "to": "Onesimus",
+    "relationship": "spiritual_father_and_pastoral_relationship",
+    "church": "Colossae",
+    "relationship_confidence": "high",
+    "basis": "New_Testament",
+    "description": "Paul described Onesimus as his child begotten in imprisonment and expressed deep personal concern for him."
+  },
+
+  {
+    "from": "James the brother of the Lord",
+    "to": "Simeon of Jerusalem",
+    "relationship": "successor_of",
+    "church": "Jerusalem",
+    "relationship_confidence": "high",
+    "basis": "early_church_tradition",
+    "description": "Simeon succeeded James as leader of the Jerusalem church."
+  },
+  {
+    "from": "Simeon of Jerusalem",
+    "to": "Justus of Jerusalem",
+    "relationship": "successor_of",
+    "church": "Jerusalem",
+    "relationship_confidence": "medium",
+    "basis": "early_episcopal_tradition",
+    "description": "Justus is traditionally placed among the successors of Simeon in the early Jerusalem episcopal succession."
+  },
+
+  {
+    "from": "Mark",
+    "to": "Anianus of Alexandria",
+    "relationship": "founder_and_successor",
+    "church": "Alexandria",
+    "relationship_confidence": "medium",
+    "basis": "Alexandrian_church_tradition",
+    "description": "Anianus is traditionally regarded as Mark's immediate successor as leader of the church of Alexandria."
+  },
+  {
+    "from": "Anianus of Alexandria",
+    "to": "Avilius",
+    "relationship": "successor_of",
+    "church": "Alexandria",
+    "relationship_confidence": "medium",
+    "basis": "early_church_tradition",
+    "description": "Avilius is traditionally placed after Anianus in the Alexandrian succession."
+  },
+
+  {
+    "from": "John",
     "to": "Polycarp of Smyrna",
-    "relationship": "apostolic_successor_through_John",
+    "relationship": "teacher_to_disciple",
+    "church": "Smyrna / Asia Minor",
     "relationship_confidence": "high",
     "basis": "Irenaeus_and_early_tradition",
-    "description": "Polycarp represents a particularly important chain of living transmission from Jesus through John."
+    "description": "Irenaeus reported that Polycarp had been instructed by apostles, especially John in the later tradition."
   },
   {
-    "from": "Jesus",
-    "to": "Papias of Hierapolis",
-    "relationship": "apostolic_tradition_bearer",
-    "relationship_confidence": "medium",
-    "basis": "early_church_tradition",
-    "description": "Papias deliberately gathered traditions from people connected to the apostles and their immediate disciples."
-  },
-  {
-    "from": "Jesus",
-    "to": "Quadratus of Athens",
-    "relationship": "post_apostolic_christian_leader",
-    "relationship_confidence": "medium",
-    "basis": "early_church_tradition",
-    "description": "Quadratus represents the early second-century generation that defended the Christian faith before the wider Roman world."
-  },
-  {
-    "from": "Jesus",
-    "to": "Aristides of Athens",
-    "relationship": "post_apostolic_christian_leader",
-    "relationship_confidence": "medium",
-    "basis": "early_church_tradition",
-    "description": "Aristides represents the early Christian apologetic tradition emerging from the apostolic Church."
-  },
-  {
-    "from": "Jesus",
-    "to": "Hermas",
-    "relationship": "post_apostolic_christian_writer",
-    "relationship_confidence": "medium",
-    "basis": "early_church_tradition",
-    "description": "Hermas represents the Roman Christian community of the early second century."
-  },
-  {
-    "from": "Jesus",
-    "to": "Justin Martyr",
-    "relationship": "post_apostolic_christian_apologist",
-    "relationship_confidence": "high",
-    "basis": "historical",
-    "description": "Justin represents the second-century Christian intellectual and apologetic tradition that developed from the apostolic faith."
-  },
-  {
-    "from": "Jesus",
+    "from": "Polycarp of Smyrna",
     "to": "Irenaeus of Lyons",
-    "relationship": "apostolic_tradition_bearer_through_Polycarp",
+    "relationship": "teacher_to_disciple",
+    "church": "Smyrna / Lyons",
     "relationship_confidence": "high",
     "basis": "Irenaeus_personal_testimony",
-    "description": "Irenaeus stands in a documented chain of transmission from the apostolic generation through Polycarp."
+    "description": "Irenaeus personally heard Polycarp and remembered his connection with the apostolic generation."
   },
   {
-    "from": "Jesus",
-    "to": "Aquila",
-    "relationship": "apostolic_generation_association",
+    "from": "Papias of Hierapolis",
+    "to": "Polycarp of Smyrna",
+    "relationship": "contemporary_apostolic_tradition_bearer",
+    "church": "Asia Minor",
+    "relationship_confidence": "low",
+    "basis": "chronology_and_early_tradition",
+    "description": "Papias and Polycarp belonged to overlapping generations in Asia Minor and both stood close to traditions originating in the apostolic age; direct personal contact is not securely established."
+  },
+
+  {
+    "from": "Origen of Alexandria",
+    "to": "Dionysius of Alexandria",
+    "relationship": "teacher_to_student",
+    "church": "Alexandria",
+    "relationship_confidence": "high",
+    "basis": "early_church_history",
+    "description": "Dionysius studied under Origen in Alexandria."
+  },
+  {
+    "from": "Origen of Alexandria",
+    "to": "Gregory Thaumaturgus",
+    "relationship": "teacher_to_student",
+    "church": "Caesarea in Palestine / Pontus",
+    "relationship_confidence": "high",
+    "basis": "Gregory_of_Nyssa_and_early_tradition",
+    "description": "Gregory Thaumaturgus studied under Origen and was deeply shaped by his teaching."
+  },
+  {
+    "from": "Dionysius of Alexandria",
+    "to": "Peter of Alexandria",
+    "relationship": "successor_in_episcopal_see",
+    "church": "Alexandria",
     "relationship_confidence": "medium",
-    "basis": "New_Testament",
-    "description": "Aquila belonged to the first generation of Christian missionaries and worked closely with Paul."
+    "basis": "Alexandrian_episcopal_succession",
+    "description": "Peter succeeded Dionysius as bishop of Alexandria."
   },
+
   {
-    "from": "Jesus",
-    "to": "Priscilla",
-    "relationship": "apostolic_generation_association",
+    "from": "Justin Martyr",
+    "to": "Tatian the Syrian",
+    "relationship": "teacher_to_student",
+    "church": "Rome",
+    "relationship_confidence": "high",
+    "basis": "Tatian_personal_testimony",
+    "description": "Tatian became a disciple of Justin in Rome."
+  },
+
+  {
+    "from": "Demetrius of Thessalonica",
+    "to": "Nestor of Thessalonica",
+    "relationship": "spiritual_father_and_disciple",
+    "church": "Thessalonica",
     "relationship_confidence": "medium",
-    "basis": "New_Testament",
-    "description": "Priscilla was a prominent missionary and teacher in the earliest Christian communities."
+    "basis": "early_hagiographic_tradition",
+    "description": "Nestor is traditionally portrayed as receiving spiritual instruction and encouragement from Demetrius before his martyrdom."
   },
   {
-    "from": "Jesus",
-    "to": "Silas / Silvanus",
-    "relationship": "apostolic_generation_association",
-    "relationship_confidence": "high",
-    "basis": "New_Testament",
-    "description": "Silas was a major missionary of the earliest Christian generation and a companion of Paul."
-  },
-  {
-    "from": "Jesus",
-    "to": "Titus",
-    "relationship": "apostolic_generation_association",
-    "relationship_confidence": "high",
-    "basis": "New_Testament",
-    "description": "Titus was a trusted co-worker of Paul and a leader in the first generation of Gentile Christianity."
-  },
-  {
-    "from": "Jesus",
-    "to": "Timothy",
-    "relationship": "apostolic_generation_association",
-    "relationship_confidence": "high",
-    "basis": "New_Testament",
-    "description": "Timothy was a close co-worker of Paul and one of the most important leaders of the next generation."
-  },
-  {
-    "from": "Jesus",
-    "to": "Tychicus",
-    "relationship": "apostolic_generation_association",
-    "relationship_confidence": "high",
-    "basis": "New_Testament",
-    "description": "Tychicus was a trusted messenger and co-worker within Paul's missionary network."
-  },
-  {
-    "from": "Jesus",
-    "to": "Onesimus",
-    "relationship": "apostolic_generation_association",
-    "relationship_confidence": "medium",
-    "basis": "New_Testament_and_early_tradition",
-    "description": "Onesimus was associated with Paul and later tradition connects him with early episcopal leadership."
-  },
-  {
-    "from": "Jesus",
-    "to": "Dionysius the Areopagite",
-    "relationship": "post_resurrection_convert",
-    "relationship_confidence": "high",
-    "basis": "New_Testament",
-    "description": "Dionysius is named in Acts as a convert through Paul's preaching in Athens."
-  },
-  {
-    "from": "Jesus",
-    "to": "Pantaenus",
-    "relationship": "apostolic_tradition_bearer",
-    "relationship_confidence": "medium",
-    "basis": "early_church_tradition",
-    "description": "Pantaenus represents the later development of the apostolic teaching tradition in Alexandria and beyond."
-  },
-  {
-    "from": "Jesus",
-    "to": "Theophilus of Antioch",
-    "relationship": "apostolic_tradition_bearer",
+    "from": "Constantine the Great",
+    "to": "Athanasius of Alexandria",
+    "relationship": "imperial_contemporary_and_church_leader",
+    "church": "Alexandria / Roman Empire",
     "relationship_confidence": "high",
     "basis": "historical",
-    "description": "Theophilus represents the continuation of the apostolic Christian tradition in the later second century."
+    "description": "Athanasius became a major ecclesiastical figure during Constantine's reign and participated in the Nicene controversy."
+  },
+  {
+    "from": "Alexander of Alexandria",
+    "to": "Athanasius of Alexandria",
+    "relationship": "bishop_and_deacon_mentor",
+    "church": "Alexandria",
+    "relationship_confidence": "high",
+    "basis": "early_church_history",
+    "description": "Athanasius served as deacon and secretary to Alexander and succeeded him as bishop of Alexandria."
+  },
+  {
+    "from": "Anthony the Great",
+    "to": "Athanasius of Alexandria",
+    "relationship": "teacher_to_disciple",
+    "church": "Alexandria",
+    "relationship_confidence": "high",
+    "basis": "early_church_history",
+    "description": "Athanasius grew up in the monastic community surrounding Anthony, and later wrote his biography."
   }
 ];
+
+const relationship_text = {
+  "appointed_as_bishop": "appointed as bishop:",
+  "successor_of": "succeeded by",
+  "missionary_companion": "missionary companion of",
+  "teacher_to_student": "teacher of",
+  "teacher_to_disciple": "teacher of",
+  "spouse": "spouse of",
+  "traditional_association": "has a traditional association with:",
+  "son_and_mother": "son of",
+  "relative": "relative of",
+  "apostle_and_disciple": "apostle and disciple:"
+};
+const relationship_inverse = {
+  "appointed_as_bishop": "appointed as bishop by",
+  "missionary_companion": "missionary companion of",
+  "successor_of": "succeessor of",
+  "appointed_or_designated_successor": "appointed by or successor of",
+  "teacher_to_disciple": "disciple of",
+  "teacher_to_student": "student of",
+  "converted": "converted by",
+  "spouse": "spouse of",
+  "traditional_association": "has a traditional association with:",
+  "son_and_mother": "mother of",
+  "relative": "relative of",
+  "apostle_and_disciple": "apostle and disciple of"
+};
