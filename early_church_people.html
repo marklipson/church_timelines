@@ -15,6 +15,7 @@
           display: flex;
           flex-direction: column;
           min-height: 95vh; /* Takes full viewport height */
+          min-width: max-content;
         }
         h1 {
           flex-grow: 0;
@@ -32,17 +33,21 @@
         }
         #timeline_area > span {
           position: absolute;
+          border-radius: 4px;
         }
         .time_axis {
           font-weight: bold;
           transform: translateX(-80%);
         }
         .person {
-          font-size: 90%;
+          font-size: 95%;
           border: solid 1px #808080;
           background-color: #d0d0d0;
           text-align: center;
           cursor: pointer;
+        }
+        .person:hover {
+          outline: solid 2px #808080;
         }
         .person.cat_missionary {
           background-color: #c0d0c0;
@@ -57,7 +62,7 @@
           background-color: #e0ffe0;
         }
         .person.cat_emperor {
-          background-color: #a0b0e0;
+          background-color: #a0b8f0;
         }
         .person.cat_evangelist {
           background-color: #f8e0f0;
@@ -65,18 +70,29 @@
         .person.cat_apostle {
           background-color: #ffe8e0;
         }
+        .person.cat_heretic {
+          background-color: #806060;
+          color: #ffc0c0;
+        }
         .person.cat_son_of_god {
           background-color: white;
           font-weight: bold;
           border-width: 2px;
           box-shadow: 0 0 12px #fff,
               0 0 15px #ffea00,
-              0 0 20px #ffaa00;        }
+              0 0 20px #ffaa00;
+        }
         .person.cat_mother_of_god {
           background-color: #c0e0ff;
-          border-width: 2px;
+        }
+        .person.selected {
           font-weight: bold;
-
+          color: white;
+          background-color: #202080;
+        }
+        .person.highlighted {
+          font-weight: bold;
+          border-width: 2px;
         }
         span.martyr {
           font-size: 80%;
@@ -108,6 +124,27 @@
           margin-left: 6px;
           color: #f0f080;
         }
+        .detail_pane {
+          position: absolute;
+          bottom: 18px;
+          right: 36px;
+          width: 500px;
+          height: 300px;
+          border: solid 3px #404040;
+          padding: 12px;
+          background-color: #ffffe8;
+          overflow-y: auto;
+          opacity: 0.85;
+        }
+        .detail_pane h2 {
+          margin: 0 0 10px 0;
+          border-bottom: solid 1px #c0c0c0;
+        }
+        .detail_pane img {
+          float: right;
+          margin: 0 0 8px 8px;
+          border: solid 2px #e0e0d0;
+        }
     </style>
 </head>
 <body>
@@ -118,5 +155,9 @@
 <script>
   const timeline = new Timeline("timeline_area", [-20, 325]);
   timeline.draw();
+  // // Recalculate if user resizes browser window
+  // window.addEventListener('resize', draw...);
+  // TODO hashtag to remember selected person
+  timeline.setup_selection();
 </script>
 </html>
