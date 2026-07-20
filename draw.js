@@ -11,12 +11,12 @@ class Timeline
     this.time_step = 10;
     this.top_to_bottom = true;
     this.timeline_y = 10;
-    this.pix_per_year = 8;
+    this.pix_per_year = 8.5;
   }
 
   year_x(year)
   {
-    return 16 + (year - this.time_range[0]) * this.pix_per_year;
+    return 24 + (year - this.time_range[0]) * this.pix_per_year;
   }
 
   slot_y(slot)
@@ -125,6 +125,44 @@ class Timeline
       if (rec.name == name)
         return rec;
     }
+  }
+
+  draw_events()
+  {
+    function emphasis(on) {
+      for (const el of document.getElementsByClassName("event"))
+      {
+        if (on)
+          el.classList.add("emphasize");
+        else
+          el.classList.remove("emphasize");
+      }
+    }
+    for (const event of events)
+    {
+        let tr = event.time_range;
+        const el = document.createElement("span");
+        this.div.appendChild(el);
+        el.innerText = event.name;
+        el.setAttribute("title", event.name + ": " + event.description)
+        el.classList.add("event")
+        el.style.left = this.year_x(tr[0]) + "px";
+        if (tr[1] - tr[0] < 3)
+        {
+          tr = [tr[0]-1.1, tr[1]+1.1];
+        }
+        el.style.width = (this.year_x(tr[1]) - this.year_x(tr[0])) + "px";
+        el.style.top = 32 + "px";
+        el.style.bottom = 8 + "px";
+        for (const cat of event.category)
+        {
+          el.classList.add("cat_" + cat);
+        }
+        el.addEventListener("mouseover", () => emphasis(1));
+        el.addEventListener("mouseout", () => emphasis(0));
+    }
+    // hover over any event: make them bolder or something
+
   }
 
   set_selection(name)
@@ -239,13 +277,17 @@ class Timeline
   {
     this.draw_years();
     this.draw_people();
+    this.draw_events();
+    this.setup_selection();
   }
 
 }
 
 /*  TODOs
  *
- *    vertical bars for persecutions, councils, other timeline events
  *    edit all AI-generated bios
  *    filter buttons, i.e. for heretics, apostles, writers, martyrs, ...
+ *    try different timelines:
+ *      iconoclasm
+ *      roman divergence, west in perspective
  */

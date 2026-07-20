@@ -1,0 +1,199 @@
+/*
+ * TIMELINE styles
+ */
+body {
+  font-family: arial, sans, helvetica;
+  margin: 16px;
+  display: flex;
+  flex-direction: column;
+  min-height: 95vh; /* Takes full viewport height */
+  min-width: max-content;
+  background-color: #b0b0b0;
+}
+h1 {
+  margin: 0;
+  padding: 8px;
+  flex-grow: 0;
+  background-color: #d0d0d6;
+  color: #606060;
+  border-bottom: solid 2px #a0a0a0;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+#timeline_area {
+  flex-grow: 1;
+  min-height: 0;
+  padding: 8px;
+  background-color: #e0e0e6;
+  position: relative;
+  width: calc(100%-20px);
+  height: 100%;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+#timeline_area > span {
+  position: absolute;
+  border-radius: 4px;
+}
+.time_axis {
+  font-weight: bold;
+  transform: translateX(-80%);
+}
+.person {
+  font-size: 95%;
+  border: solid 1px #505050;
+  background-color: #d0d0d0;
+  text-align: center;
+  cursor: pointer;
+  z-index: 2;
+  opacity: 0.9;
+}
+.person:hover {
+  outline: solid 2px #808080;
+}
+.person.cat_missionary {
+  background-color: #c0d0c0;
+}
+.person.cat_writer {
+  background-color: #c0f0e0;
+}
+.person.cat_monk {
+  background-color: #c0c0c8;
+}
+.person.cat_bishop {
+  background-color: #e0ffe0;
+}
+.person.cat_emperor {
+  background-color: #a0b8f0;
+}
+.person.cat_evangelist {
+  background-color: #fcfada;
+}
+.person.cat_apostle {
+  background-color: #d4ebff;
+}
+.person.cat_heretic {
+  background-color: #806060;
+  color: #ffc0c0;
+}
+.person.cat_son_of_god {
+  background-color: white;
+  font-size: 120%;
+  font-weight: bold;
+  border-width: 2px;
+  box-shadow: 0 0 12px #fff,
+      0 0 15px #ffea00,
+      0 0 20px #ffaa00;
+}
+.person.cat_mother_of_god {
+  background-color: #c0e0ff;
+}
+.person.selected {
+  font-weight: bold;
+  color: white;
+  background-color: #202080;
+}
+.person.highlighted {
+  font-weight: bold;
+  border-width: 2px;
+}
+span.martyr {
+  font-size: 80%;
+  margin-left: 6px;
+  color: red;
+}
+span.writer {
+  font-size: 80%;
+  margin-left: 6px;
+  color: green;
+}
+span.bishop {
+  font-size: 80%;
+  margin-left: 6px;
+  color: #808080;
+}
+span.missionary {
+  font-size: 80%;
+  margin-left: 6px;
+  color: #80a080;
+}
+span.monk {
+  font-size: 80%;
+  margin-left: 6px;
+  color: #808080;
+}
+span.emperor {
+  font-size: 80%;
+  margin-left: 6px;
+  color: #f0f080;
+}
+@keyframes emphasizeEvents {
+  from {opacity: 0.4;}
+  to {opacity: 0.8;}
+}
+.event {
+  font-size: 95%;
+  border: solid 1px #808080;
+  color: #c0c0c0;
+  background-color: #303030;
+  text-align: center;
+  cursor: pointer;
+  writing-mode: vertical-rl;
+  z-index: 1;
+  text-align: right;
+  padding-bottom: 8px;
+  opacity: 0.5;
+  transform: translateX(-50%);
+}
+.event.emphasize {
+  z-index: 3;
+  opacity: 0.8;
+  animation-name: emphasizeEvents;
+  animation-duration: 0.25s;
+  animation-timing-function: ease-in;
+}
+.event.cat_divine {
+  color: #e0e0e0;
+  background-color: #807020;
+  box-shadow: 0 0 8px #fff,
+      0 0 10px #ffea80;
+}
+.event.cat_era {
+  color: #ddd;
+  background-color: #b0a080;
+}
+.event.cat_persecution {
+  background-color: #603838;
+}
+.event.cat_persecution-light {
+  background-color: #906060;
+}
+.event.cat_persecution-heavy {
+  background-color: #601818;
+  color: #eee;
+}
+.event.cat_history {
+  background-color: #606060;
+}
+.detail_pane {
+  position: absolute;
+  bottom: 18px;
+  right: 36px;
+  width: 500px;
+  height: 300px;
+  border: solid 3px #404040;
+  padding: 12px;
+  background-color: #ffffe8;
+  overflow-y: auto;
+  opacity: 0.85;
+  z-index: 5;
+}
+.detail_pane h2 {
+  margin: 0 0 10px 0;
+  border-bottom: solid 1px #c0c0c0;
+}
+.detail_pane img {
+  float: right;
+  margin: 0 0 8px 8px;
+  border: solid 2px #e0e0d0;
+}
