@@ -64,6 +64,24 @@ const relationships = [
   },
   {
     "from": "John",
+    "to": "Ignatius of Antioch",
+    "relationship": "teacher_to_disciple",
+    "church": "Antioch",
+    "relationship_confidence": "medium",
+    "basis": "Jerome_and_early_tradition",
+    "description": "Ancient church historians, such as Jerome and the record of the Martyrdom of Ignatius, identify Ignatius and his contemporary Polycarp as direct disciples of John."
+  },
+  {
+    "from": "Peter",
+    "to": "Ignatius of Antioch",
+    "relationship": "successor_of",
+    "church": "Antioch",
+    "relationship_confidence": "medium",
+    "basis": "",
+    "description": "According to Theodoret of Cyrrhus, Peter, who established the church at Antioch, ordained Ignatius as bishop of Antioch.  Eusebius writes that Evodius preceeded him."
+  },
+  {
+    "from": "John",
     "to": "Polycarp of Smyrna",
     "relationship": "teacher_to_disciple",
     "church": "Smyrna",
@@ -78,7 +96,7 @@ const relationships = [
     "church": "Smyrna / Lyons",
     "relationship_confidence": "high",
     "basis": "Irenaeus_personal_testimony",
-    "description": "Irenaeus knew Polycarp personally in his youth and preserved his memories of the apostolic generation."
+    "description": "Irenaeus knew Polycarp personally in his youth and explicitly remembered hearing Polycarp and the traditions he had received from the apostolic generation."
   },
   {
     "from": "John",
@@ -250,15 +268,6 @@ const relationships = [
     "relationship_confidence": "high",
     "basis": "surviving_letter",
     "description": "Ignatius addressed pastoral advice to Polycarp concerning his episcopal ministry."
-  },
-  {
-    "from": "Polycarp of Smyrna",
-    "to": "Irenaeus of Lyons",
-    "relationship": "teacher_to_disciple",
-    "church": "Smyrna / Lyons",
-    "relationship_confidence": "high",
-    "basis": "personal_testimony_of_Irenaeus",
-    "description": "Irenaeus explicitly remembered hearing Polycarp and the traditions he had received from the apostolic generation."
   },
   {
     "from": "Origen of Alexandria",
@@ -672,16 +681,6 @@ const relationships = [
     "basis": "Irenaeus_personal_testimony",
     "description": "Irenaeus personally heard Polycarp and remembered his connection with the apostolic generation."
   },
-  {
-    "from": "Papias of Hierapolis",
-    "to": "Polycarp of Smyrna",
-    "relationship": "contemporary_apostolic_tradition_bearer",
-    "church": "Asia Minor",
-    "relationship_confidence": "low",
-    "basis": "chronology_and_early_tradition",
-    "description": "Papias and Polycarp belonged to overlapping generations in Asia Minor and both stood close to traditions originating in the apostolic age; direct personal contact is not securely established."
-  },
-
   {
     "from": "Origen of Alexandria",
     "to": "Dionysius of Alexandria",

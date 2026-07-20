@@ -1096,7 +1096,7 @@ const people = [
     "name": "Photini",
     "birth_range": [0, 20],
     "death_range": [65, 100],
-    "category": ["disciple", "evangelist", "martyr", "holy_woman", "saint"],
+    "category": ["disciple", "martyr", "holy_woman", "saint"],
     "biography": "The Samaritan Woman whom Christ met at the well, traditionally remembered as a missionary and martyr after proclaiming Christ to others.",
     "date_basis": "tradition",
     "date_confidence": "very_low",
