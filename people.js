@@ -9,7 +9,21 @@ const people = [
     "date_basis": "traditional",
     "date_confidence": "high",
     "identity_confidence": "high",
-    "notes": ""
+    "notes": "",
+    "p": 0,
+  },
+  {
+    "name": "Mary the Theotokos",
+    "birth_range": [-25, -15],
+    "death_range": [40, 60],
+    "category": ["apostolic_era_figure", "mother_of_god"],
+    "biography": "Virgin mother of Jesus and central figure in the apostolic community after the Resurrection.",
+    "image": "theotokos.jpg",
+    "date_basis": "traditional",
+    "date_confidence": "very_low",
+    "identity_confidence": "high",
+    "notes": "The New Testament does not give a date of death; later traditions differ.",
+    "p": 1
   },
   {
     "name": "John the Baptist",
@@ -20,7 +34,8 @@ const people = [
     "date_basis": "traditional",
     "date_confidence": "high",
     "identity_confidence": "high",
-    "notes": ""
+    "notes": "",
+    "p": 1,
   },
   {
     "name": "Peter",
@@ -31,7 +46,8 @@ const people = [
     "date_basis": "traditional",
     "date_confidence": "medium",
     "identity_confidence": "high",
-    "notes": "The traditional date of martyrdom under Nero is approximately 64–67."
+    "notes": "The traditional date of martyrdom under Nero is approximately 64–67.",
+    "p": 1
   },
   {
     "name": "John",
@@ -42,7 +58,8 @@ const people = [
     "date_basis": "traditional",
     "date_confidence": "medium",
     "identity_confidence": "high",
-    "notes": "Tradition places his death during the reign of Trajan, commonly around 98–100."
+    "notes": "Tradition places his death during the reign of Trajan, commonly around 98–100.",
+    "p": 1
   },
   {
     "name": "James the brother of the Lord",
@@ -53,7 +70,8 @@ const people = [
     "date_basis": "early_historical_tradition",
     "date_confidence": "high",
     "identity_confidence": "high",
-    "notes": "His death in Jerusalem is reported by Josephus and other early sources."
+    "notes": "His death in Jerusalem is reported by Josephus and other early sources.",
+    "p": 1
   },
   {
     "name": "Paul",
@@ -64,7 +82,8 @@ const people = [
     "date_basis": "historical_tradition",
     "date_confidence": "medium",
     "identity_confidence": "high",
-    "notes": "Traditionally martyred in Rome under Nero."
+    "notes": "Traditionally martyred in Rome under Nero.",
+    "p": 1
   },
   {
     "name": "Matthew",
@@ -75,7 +94,32 @@ const people = [
     "date_basis": "traditional",
     "date_confidence": "low",
     "identity_confidence": "high",
-    "notes": "The location and date of his death are uncertain."
+    "notes": "The location and date of his death are uncertain.",
+    "p": 1
+  },
+  {
+    "name": "Luke",
+    "birth_range": [5, 15],
+    "death_range": [80, 90],
+    "category": ["evangelist", "missionary", "historian"],
+    "biography": "Companion of Paul and traditional author of the Gospel of Luke and Acts.",
+    "date_basis": "traditional",
+    "date_confidence": "medium",
+    "identity_confidence": "high",
+    "notes": "The traditional date of death is often placed around 84.",
+    "p": 1
+  },
+  {
+    "name": "Mark",
+    "birth_range": [5, 15],
+    "death_range": [65, 80],
+    "category": ["evangelist", "missionary", "bishop"],
+    "biography": "Early missionary associated with Peter and Paul and traditionally the author of the Gospel of Mark; regarded as founder of the church of Alexandria.",
+    "date_basis": "traditional",
+    "date_confidence": "low",
+    "identity_confidence": "high",
+    "notes": "The identification of Mark with John Mark is traditional and widely accepted.",
+    "p": 1
   },
   {
     "name": "Andrew",
@@ -86,7 +130,8 @@ const people = [
     "date_basis": "traditional",
     "date_confidence": "low",
     "identity_confidence": "high",
-    "notes": "Traditional accounts of his later missionary activity and martyrdom vary."
+    "notes": "Traditional accounts of his later missionary activity and martyrdom vary.",
+    "p": 2
   },
   {
     "name": "Thomas",
@@ -97,7 +142,8 @@ const people = [
     "date_basis": "traditional",
     "date_confidence": "low",
     "identity_confidence": "high",
-    "notes": "The tradition of his Indian mission is ancient, though details are difficult to verify."
+    "notes": "The tradition of his Indian mission is ancient, though details are difficult to verify.",
+    "p": 2
   },
   {
     "name": "Philip",
@@ -108,7 +154,8 @@ const people = [
     "date_basis": "traditional",
     "date_confidence": "low",
     "identity_confidence": "high",
-    "notes": "Some traditions may conflate him with Philip the evangelist."
+    "notes": "Some traditions may conflate him with Philip the evangelist.",
+    "p": 2
   },
   {
     "name": "Bartholomew",
@@ -119,7 +166,8 @@ const people = [
     "date_basis": "traditional",
     "date_confidence": "very_low",
     "identity_confidence": "high",
-    "notes": "The details of his later life and death are highly uncertain."
+    "notes": "The details of his later life and death are highly uncertain.",
+    "p": 2
   },
   {
     "name": "James son of Alphaeus",
@@ -130,7 +178,8 @@ const people = [
     "date_basis": "traditional",
     "date_confidence": "very_low",
     "identity_confidence": "high",
-    "notes": "Later traditions about his ministry and death vary considerably."
+    "notes": "Later traditions about his ministry and death vary considerably.",
+    "p": 2
   },
   {
     "name": "James son of Zebedee",
@@ -142,8 +191,8 @@ const people = [
     "date_confidence": "medium",
     "identity_confidence": "high",
     "historicity": "historical",
-    "heretic": false,
-    "notes": "Acts 12 records his execution by Herod Agrippa I."
+    "notes": "Acts 12 records his execution by Herod Agrippa I.",
+    "p": 2
   },
   {
     "name": "Jude / Thaddeus",
@@ -154,7 +203,8 @@ const people = [
     "date_basis": "traditional",
     "date_confidence": "very_low",
     "identity_confidence": "medium",
-    "notes": "The identification of various New Testament figures named Jude or Judas is complex."
+    "notes": "The identification of various New Testament figures named Jude or Judas is complex.",
+    "p": 2
   },
   {
     "name": "Simon the Zealot",
@@ -165,106 +215,8 @@ const people = [
     "date_basis": "traditional",
     "date_confidence": "very_low",
     "identity_confidence": "high",
-    "notes": "His later life is poorly documented."
-  },
-  {
-    "name": "Matthias",
-    "birth_range": [1, 15],
-    "death_range": [60, 100],
-    "category": ["apostle", "missionary", "martyr"],
-    "biography": "Chosen to replace Judas Iscariot among the Twelve after the Resurrection.",
-    "date_basis": "traditional",
-    "date_confidence": "very_low",
-    "identity_confidence": "high",
-    "notes": "Later traditions concerning his mission and death vary."
-  },
-  {
-    "name": "Mary the Theotokos",
-    "birth_range": [-25, -15],
-    "death_range": [40, 60],
-    "category": ["apostolic_era_figure", "mother_of_god"],
-    "biography": "Mother of Jesus and central figure in the apostolic community after the Resurrection.",
-    "date_basis": "traditional",
-    "date_confidence": "very_low",
-    "identity_confidence": "high",
-    "notes": "The New Testament does not give a date of death; later traditions differ."
-  },
-  {
-    "name": "Barnabas",
-    "birth_range": [5, 10],
-    "death_range": [60, 70],
-    "category": ["apostolic_missionary", "missionary"],
-    "biography": "Levite from Cyprus and Paul's early missionary partner; a major evangelist of the first generation.",
-    "date_basis": "traditional",
-    "date_confidence": "low",
-    "identity_confidence": "high",
-    "notes": "Later traditions associate him strongly with Cyprus."
-  },
-  {
-    "name": "Luke",
-    "birth_range": [5, 15],
-    "death_range": [80, 90],
-    "category": ["evangelist", "missionary", "historian"],
-    "biography": "Companion of Paul and traditional author of the Gospel of Luke and Acts.",
-    "date_basis": "traditional",
-    "date_confidence": "medium",
-    "identity_confidence": "high",
-    "notes": "The traditional date of death is often placed around 84."
-  },
-  {
-    "name": "Mark",
-    "birth_range": [5, 15],
-    "death_range": [65, 80],
-    "category": ["evangelist", "missionary", "bishop"],
-    "biography": "Early missionary associated with Peter and Paul and traditionally the author of the Gospel of Mark; regarded as founder of the church of Alexandria.",
-    "date_basis": "traditional",
-    "date_confidence": "low",
-    "identity_confidence": "high",
-    "notes": "The identification of Mark with John Mark is traditional and widely accepted."
-  },
-  {
-    "name": "Linus",
-    "birth_range": [10, 20],
-    "death_range": [76, 80],
-    "category": ["bishop", "apostolic_successor"],
-    "biography": "Traditionally the first bishop of Rome after Peter.",
-    "date_basis": "traditional",
-    "date_confidence": "low",
-    "identity_confidence": "high",
-    "notes": "Named in 2 Timothy 4:21 and early Roman succession lists."
-  },
-  {
-    "name": "Anacletus / Cletus",
-    "birth_range": [20, 30],
-    "death_range": [88, 92],
-    "category": ["bishop", "apostolic_successor"],
-    "biography": "Traditionally the second bishop of Rome after Linus.",
-    "date_basis": "traditional",
-    "date_confidence": "very_low",
-    "identity_confidence": "medium",
-    "notes": "Ancient sources differ over whether Anacletus and Cletus were the same person."
-  },
-  {
-    "name": "Clement of Rome",
-    "birth_range": [35, 45],
-    "death_range": [100, 102],
-    "category": ["bishop", "apostolic_father", "writer"],
-    "biography": "Bishop of Rome and author of 1 Clement, one of the earliest surviving post-New Testament Christian writings.",
-    "date_basis": "early_historical_tradition",
-    "date_confidence": "medium",
-    "identity_confidence": "high",
-    "notes": "Traditionally associated with the third position in the Roman succession after Peter."
-  },
-  {
-    "name": "Evodius of Antioch",
-    "birth_range": [20, 30],
-    "death_range": [66, 69],
-    "category": ["bishop", "apostolic_successor"],
-    "biography": "Traditionally the first bishop of Antioch after Peter and an early leader of the Syrian church.",
-    "date_basis": "traditional",
-    "date_confidence": "low",
-    "identity_confidence": "medium",
-    "notes": "The exact chronology of the Antiochene succession is uncertain."
+    "notes": "His later life is poorly documented.",
+    "p": 2
   },
   {
     "name": "Ignatius of Antioch",
@@ -275,7 +227,80 @@ const people = [
     "date_basis": "early_historical_tradition",
     "date_confidence": "medium",
     "identity_confidence": "high",
-    "notes": "One of the most important witnesses to early second-century Christianity."
+    "notes": "One of the most important witnesses to early second-century Christianity.",
+    "p": 2
+  },
+  {
+    "name": "Matthias",
+    "birth_range": [1, 15],
+    "death_range": [60, 100],
+    "category": ["apostle", "missionary", "martyr"],
+    "biography": "Chosen to replace Judas Iscariot among the Twelve after the Resurrection.",
+    "date_basis": "traditional",
+    "date_confidence": "very_low",
+    "identity_confidence": "high",
+    "notes": "Later traditions concerning his mission and death vary.",
+    "p": 4
+  },
+  {
+    "name": "Barnabas",
+    "birth_range": [5, 10],
+    "death_range": [60, 70],
+    "category": ["apostolic_missionary", "missionary"],
+    "biography": "Levite from Cyprus and Paul's early missionary partner; a major evangelist of the first generation.",
+    "date_basis": "traditional",
+    "date_confidence": "low",
+    "identity_confidence": "high",
+    "notes": "Later traditions associate him strongly with Cyprus.",
+    "p": 4
+  },
+  {
+    "name": "Linus",
+    "birth_range": [10, 20],
+    "death_range": [76, 80],
+    "category": ["bishop", "apostolic_successor"],
+    "biography": "Traditionally the first bishop of Rome after Peter.",
+    "date_basis": "traditional",
+    "date_confidence": "low",
+    "identity_confidence": "high",
+    "notes": "Named in 2 Timothy 4:21 and early Roman succession lists.",
+    "p": 3
+  },
+  {
+    "name": "Anacletus / Cletus",
+    "birth_range": [20, 30],
+    "death_range": [88, 92],
+    "category": ["bishop", "apostolic_successor"],
+    "biography": "Traditionally the second bishop of Rome after Linus.",
+    "date_basis": "traditional",
+    "date_confidence": "very_low",
+    "identity_confidence": "medium",
+    "notes": "Ancient sources differ over whether Anacletus and Cletus were the same person.",
+    "p": 4
+  },
+  {
+    "name": "Clement of Rome",
+    "birth_range": [35, 45],
+    "death_range": [100, 102],
+    "category": ["bishop", "apostolic_father", "writer"],
+    "biography": "Bishop of Rome and author of 1 Clement, one of the earliest surviving post-New Testament Christian writings.",
+    "date_basis": "early_historical_tradition",
+    "date_confidence": "medium",
+    "identity_confidence": "high",
+    "notes": "Traditionally associated with the third position in the Roman succession after Peter.",
+    "p": 3
+  },
+  {
+    "name": "Evodius of Antioch",
+    "birth_range": [20, 30],
+    "death_range": [66, 69],
+    "category": ["bishop", "apostolic_successor"],
+    "biography": "Traditionally the first bishop of Antioch after Peter and an early leader of the Syrian church.",
+    "date_basis": "traditional",
+    "date_confidence": "low",
+    "identity_confidence": "medium",
+    "notes": "The exact chronology of the Antiochene succession is uncertain.",
+    "p": 4
   },
   {
     "name": "Hero of Antioch",
@@ -286,7 +311,8 @@ const people = [
     "date_basis": "traditional",
     "date_confidence": "very_low",
     "identity_confidence": "medium",
-    "notes": "Little securely known."
+    "notes": "Little securely known.",
+    "p": 4
   },
   {
     "name": "Simeon of Jerusalem",
@@ -297,7 +323,8 @@ const people = [
     "date_basis": "early_historical_tradition",
     "date_confidence": "medium",
     "identity_confidence": "high",
-    "notes": "Eusebius preserves traditions concerning his succession and martyrdom."
+    "notes": "Eusebius preserves traditions concerning his succession and martyrdom.",
+    "p": 4
   },
   {
     "name": "Polycarp of Smyrna",
@@ -308,7 +335,8 @@ const people = [
     "date_basis": "early_historical_tradition",
     "date_confidence": "medium",
     "identity_confidence": "high",
-    "notes": "His connection with John is reported by Irenaeus."
+    "notes": "His connection with John is reported by Irenaeus.",
+    "p": 2
   },
   {
     "name": "Papias of Hierapolis",
@@ -319,7 +347,8 @@ const people = [
     "date_basis": "early_historical_tradition",
     "date_confidence": "low",
     "identity_confidence": "high",
-    "notes": "His work survives only in fragments quoted by later authors."
+    "notes": "His work survives only in fragments quoted by later authors.",
+    "p": 4
   },
   {
     "name": "Quadratus of Athens",
@@ -330,7 +359,8 @@ const people = [
     "date_basis": "early_historical_tradition",
     "date_confidence": "low",
     "identity_confidence": "high",
-    "notes": "Often regarded as one of the earliest named Christian apologists."
+    "notes": "Often regarded as one of the earliest named Christian apologists.",
+    "p": 4
   },
   {
     "name": "Aristides of Athens",
@@ -341,7 +371,8 @@ const people = [
     "date_basis": "traditional",
     "date_confidence": "low",
     "identity_confidence": "medium",
-    "notes": "The details of his life are sparse."
+    "notes": "The details of his life are sparse.",
+    "p": 4
   },
   {
     "name": "Hermas",
@@ -352,7 +383,8 @@ const people = [
     "date_basis": "early_historical_tradition",
     "date_confidence": "low",
     "identity_confidence": "medium",
-    "notes": "The work itself is better attested than the author's biography."
+    "notes": "The work itself is better attested than the author's biography.",
+    "p": 2
   },
   {
     "name": "Justin Martyr",
@@ -363,7 +395,8 @@ const people = [
     "date_basis": "historical",
     "date_confidence": "medium",
     "identity_confidence": "high",
-    "notes": "His martyrdom under Marcus Aurelius is well established."
+    "notes": "His martyrdom under Marcus Aurelius is well established.",
+    "p": 2
   },
   {
     "name": "Irenaeus of Lyons",
@@ -374,7 +407,8 @@ const people = [
     "date_basis": "historical_tradition",
     "date_confidence": "medium",
     "identity_confidence": "high",
-    "notes": "He personally knew Polycarp as a young man."
+    "notes": "He personally knew Polycarp as a young man.",
+    "p": 2
   },
   {
     "name": "Hegesippus",
@@ -385,7 +419,8 @@ const people = [
     "date_basis": "historical_tradition",
     "date_confidence": "low",
     "identity_confidence": "high",
-    "notes": "His writings survive only in fragments."
+    "notes": "His writings survive only in fragments.",
+    "p": 3
   },
   {
     "name": "Aquila",
@@ -396,7 +431,8 @@ const people = [
     "date_basis": "historical_tradition",
     "date_confidence": "low",
     "identity_confidence": "high",
-    "notes": "Mentioned repeatedly in the Pauline letters and Acts."
+    "notes": "Mentioned repeatedly in the Pauline letters and Acts.",
+    "p": 4
   },
   {
     "name": "Priscilla",
@@ -407,7 +443,8 @@ const people = [
     "date_basis": "historical_tradition",
     "date_confidence": "low",
     "identity_confidence": "high",
-    "notes": "One of the most prominent women in the earliest Christian missionary movement."
+    "notes": "One of the most prominent women in the earliest Christian missionary movement.",
+    "p": 4
   },
   {
     "name": "Silas / Silvanus",
@@ -418,7 +455,8 @@ const people = [
     "date_basis": "historical_tradition",
     "date_confidence": "low",
     "identity_confidence": "high",
-    "notes": "The identification of Silas with Silvanus is traditional and widely accepted."
+    "notes": "The identification of Silas with Silvanus is traditional and widely accepted.",
+    "p": 4
   },
   {
     "name": "Titus",
@@ -429,7 +467,8 @@ const people = [
     "date_basis": "traditional",
     "date_confidence": "low",
     "identity_confidence": "high",
-    "notes": "His later episcopal role is primarily preserved in tradition."
+    "notes": "His later episcopal role is primarily preserved in tradition.",
+    "p": 4
   },
   {
     "name": "Timothy",
@@ -440,7 +479,8 @@ const people = [
     "date_basis": "traditional",
     "date_confidence": "low",
     "identity_confidence": "high",
-    "notes": "The New Testament gives substantial information about his relationship with Paul."
+    "notes": "The New Testament gives substantial information about his relationship with Paul.",
+    "p": 4
   },
   {
     "name": "Tychicus",
@@ -451,7 +491,8 @@ const people = [
     "date_basis": "historical_tradition",
     "date_confidence": "very_low",
     "identity_confidence": "high",
-    "notes": "His later life is unknown."
+    "notes": "His later life is unknown.",
+    "p": 5
   },
   {
     "name": "Onesimus",
@@ -462,7 +503,8 @@ const people = [
     "date_basis": "traditional",
     "date_confidence": "very_low",
     "identity_confidence": "medium",
-    "notes": "The identification of the Onesimus of Philemon with the later bishop is traditional but not certain."
+    "notes": "The identification of the Onesimus of Philemon with the later bishop is traditional but not certain.",
+    "p": 4
   },
   {
     "name": "Dionysius the Areopagite",
@@ -473,7 +515,8 @@ const people = [
     "date_basis": "mixed_historical_tradition",
     "date_confidence": "very_low",
     "identity_confidence": "medium",
-    "notes": "The later biography is difficult to distinguish from subsequent legendary development."
+    "notes": "The later biography is difficult to distinguish from subsequent legendary development.",
+    "p": 4
   },
   {
     "name": "Pantaenus",
@@ -484,7 +527,8 @@ const people = [
     "date_basis": "historical_tradition",
     "date_confidence": "low",
     "identity_confidence": "high",
-    "notes": "Associated with the early development of Christian intellectual life in Alexandria."
+    "notes": "Associated with the early development of Christian intellectual life in Alexandria.",
+    "p": 4
   },
   {
     "name": "Theophilus of Antioch",
@@ -495,7 +539,8 @@ const people = [
     "date_basis": "historical",
     "date_confidence": "medium",
     "identity_confidence": "high",
-    "notes": "Active in the later second century."
+    "notes": "Active in the later second century.",
+    "p": 4
   },
 
   {
@@ -507,7 +552,8 @@ const people = [
     "date_basis": "historical_tradition",
     "date_confidence": "low",
     "identity_confidence": "high",
-    "notes": "Author of the Plea for the Christians and a work on the resurrection of the dead; his dates are approximate."
+    "notes": "Author of the Plea for the Christians and a work on the resurrection of the dead; his dates are approximate.",
+    "p": 4
   },
   {
     "name": "Tatian the Syrian",
@@ -518,7 +564,8 @@ const people = [
     "date_basis": "historical_tradition",
     "date_confidence": "low",
     "identity_confidence": "high",
-    "notes": "Later associated with Encratite tendencies, but his earlier work represents an important stage in the development of Christian literary culture."
+    "notes": "Later associated with Encratite tendencies, but his earlier work represents an important stage in the development of Christian literary culture.",
+    "p": 4
   },
   {
     "name": "Melito of Sardis",
@@ -529,7 +576,8 @@ const people = [
     "date_basis": "historical_tradition",
     "date_confidence": "medium",
     "identity_confidence": "high",
-    "notes": "An important witness to second-century theology, especially concerning Christ and Pascha."
+    "notes": "An important witness to second-century theology, especially concerning Christ and Pascha.",
+    "p": 3
   },
   {
     "name": "Dionysius of Corinth",
@@ -540,7 +588,8 @@ const people = [
     "date_basis": "historical_tradition",
     "date_confidence": "low",
     "identity_confidence": "high",
-    "notes": "His writings survive only in fragments, but Eusebius regarded him as an important second-century church leader."
+    "notes": "His writings survive only in fragments, but Eusebius regarded him as an important second-century church leader.",
+    "p": 4
   },
   {
     "name": "Apollinaris of Hierapolis",
@@ -551,7 +600,8 @@ const people = [
     "date_basis": "historical_tradition",
     "date_confidence": "low",
     "identity_confidence": "high",
-    "notes": "His writings are largely lost but he was regarded as a significant early Christian author."
+    "notes": "His writings are largely lost but he was regarded as a significant early Christian author.",
+    "p": 5
   },
   {
     "name": "Polycrates of Ephesus",
@@ -562,7 +612,8 @@ const people = [
     "date_basis": "historical_tradition",
     "date_confidence": "low",
     "identity_confidence": "high",
-    "notes": "Represents the continuing strength of the Johannine churches in Asia Minor."
+    "notes": "Represents the continuing strength of the Johannine churches in Asia Minor.",
+    "p": 5
   },
   {
     "name": "Clement of Alexandria",
@@ -573,7 +624,8 @@ const people = [
     "date_basis": "historical_tradition",
     "date_confidence": "medium",
     "identity_confidence": "high",
-    "notes": "Slightly later than the core apostolic and immediate post-apostolic period, but an important bridge into the mature intellectual tradition of the early Church."
+    "notes": "Slightly later than the core apostolic and immediate post-apostolic period, but an important bridge into the mature intellectual tradition of the early Church.",
+    "p": 3
   },
   {
     "name": "Abercius of Hierapolis",
@@ -584,7 +636,8 @@ const people = [
     "date_basis": "historical_tradition",
     "date_confidence": "low",
     "identity_confidence": "medium",
-    "notes": "The Abercius inscription is an important early witness to Christian self-understanding and pilgrimage."
+    "notes": "The Abercius inscription is an important early witness to Christian self-understanding and pilgrimage.",
+    "p": 5
   },
   {
     "name": "Marcion of Sinope",
@@ -596,7 +649,8 @@ const people = [
     "date_basis": "historical_tradition",
     "date_confidence": "medium",
     "identity_confidence": "high",
-    "notes": "Not part of the catholic succession, but historically important for understanding the development of the New Testament canon and orthodox responses to competing interpretations of Christianity."
+    "notes": "Not part of the catholic succession, but historically important for understanding the development of the New Testament canon and orthodox responses to competing interpretations of Christianity.",
+    "p": 5
   },
   {
     "name": "Valentinus",
@@ -608,7 +662,8 @@ const people = [
     "date_basis": "historical_tradition",
     "date_confidence": "low",
     "identity_confidence": "high",
-    "notes": "Useful for understanding the theological environment against which Irenaeus and other orthodox writers argued."
+    "notes": "Useful for understanding the theological environment against which Irenaeus and other orthodox writers argued.",
+    "p": 4
   },
   {
     "name": "Basilides",
@@ -620,7 +675,8 @@ const people = [
     "date_basis": "historical_tradition",
     "date_confidence": "low",
     "identity_confidence": "high",
-    "notes": "His inclusion is useful for showing the diversity of competing Christian interpretations in the second century."
+    "notes": "His inclusion is useful for showing the diversity of competing Christian interpretations in the second century.",
+    "p": 4
   },
   {
     "name": "Ptolemy the Valentinian",
@@ -632,7 +688,8 @@ const people = [
     "date_basis": "historical_tradition",
     "date_confidence": "low",
     "identity_confidence": "medium",
-    "notes": "His exact biography is uncertain, but he is an important representative of the Valentinian movement."
+    "notes": "His exact biography is uncertain, but he is an important representative of the Valentinian movement.",
+    "p": 5
   },
   {
     "name": "Soter of Rome",
@@ -643,7 +700,8 @@ const people = [
     "date_basis": "historical_tradition",
     "date_confidence": "medium",
     "identity_confidence": "high",
-    "notes": "A useful figure for illustrating the growing interconnection of major Christian churches."
+    "notes": "A useful figure for illustrating the growing interconnection of major Christian churches.",
+    "p": 5
   },
   {
     "name": "Eleutherus of Rome",
@@ -654,7 +712,8 @@ const people = [
     "date_basis": "historical_tradition",
     "date_confidence": "medium",
     "identity_confidence": "high",
-    "notes": "His episcopate falls near the period when catholic Christian structures and identity were becoming increasingly explicit."
+    "notes": "His episcopate falls near the period when catholic Christian structures and identity were becoming increasingly explicit.",
+    "p": 5
   },
 
 
@@ -668,7 +727,8 @@ const people = [
     "date_confidence": "medium",
     "identity_confidence": "high",
     "heretic": false,
-    "notes": "Later associated with Montanism. His major writings belong primarily to the late second and early third centuries; his final ecclesiastical status is historically complicated."
+    "notes": "Later associated with Montanism. His major writings belong primarily to the late second and early third centuries; his final ecclesiastical status is historically complicated.",
+    "p": 3
   },
   {
     "name": "Hippolytus of Rome",
@@ -680,7 +740,8 @@ const people = [
     "date_confidence": "medium",
     "identity_confidence": "medium",
     "heretic": false,
-    "notes": "His precise identity and relationship to the Roman episcopate are debated; traditionally died in exile or martyrdom."
+    "notes": "His precise identity and relationship to the Roman episcopate are debated; traditionally died in exile or martyrdom.",
+    "p": 2
   },
   {
     "name": "Origen of Alexandria",
@@ -692,7 +753,8 @@ const people = [
     "date_confidence": "high",
     "identity_confidence": "high",
     "heretic": false,
-    "notes": "A central figure for understanding the development of Christian biblical scholarship and theology before Nicaea. Some teachings later associated with Origenism were condemned, but the status of Origen himself is historically and ecclesiastically complex."
+    "notes": "A central figure for understanding the development of Christian biblical scholarship and theology before Nicaea. Some teachings later associated with Origenism were condemned, but the status of Origen himself is historically and ecclesiastically complex.",
+    "p": 2
   },
   {
     "name": "Cyprian of Carthage",
@@ -704,7 +766,8 @@ const people = [
     "date_confidence": "high",
     "identity_confidence": "high",
     "heretic": false,
-    "notes": "Martyred during the persecution under Valerian."
+    "notes": "Martyred during the persecution under Valerian.",
+    "p": 5
   },
   {
     "name": "Novatian",
@@ -716,7 +779,8 @@ const people = [
     "date_confidence": "medium",
     "identity_confidence": "high",
     "heretic": true,
-    "notes": "The Novatianist movement was schismatic and rigorist; Novatian is not normally classified simply as a doctrinal heretic."
+    "notes": "The Novatianist movement was schismatic and rigorist; Novatian is not normally classified simply as a doctrinal heretic.",
+    "p": 5
   },
   {
     "name": "Dionysius of Alexandria",
@@ -728,7 +792,8 @@ const people = [
     "date_confidence": "medium",
     "identity_confidence": "high",
     "heretic": false,
-    "notes": "Known through surviving fragments and extensive references in later writers."
+    "notes": "Known through surviving fragments and extensive references in later writers.",
+    "p": 2
   },
   {
     "name": "Gregory Thaumaturgus",
@@ -740,7 +805,8 @@ const people = [
     "date_confidence": "medium",
     "identity_confidence": "high",
     "heretic": false,
-    "notes": "Later tradition greatly magnified his miraculous reputation, but his historical missionary importance is substantial."
+    "notes": "Later tradition greatly magnified his miraculous reputation, but his historical missionary importance is substantial.",
+    "p": 3
   },
   {
     "name": "Firmilian of Caesarea",
@@ -752,7 +818,8 @@ const people = [
     "date_confidence": "medium",
     "identity_confidence": "high",
     "heretic": false,
-    "notes": "His surviving correspondence provides important evidence for the organization of third-century Christianity."
+    "notes": "His surviving correspondence provides important evidence for the organization of third-century Christianity.",
+    "p": 5
   },
   {
     "name": "Archelaus of Cascar",
@@ -764,7 +831,8 @@ const people = [
     "date_confidence": "low",
     "identity_confidence": "medium",
     "heretic": false,
-    "notes": "Represents the eastern Christian response to emerging Manichaeism."
+    "notes": "Represents the eastern Christian response to emerging Manichaeism.",
+    "p": 5
   },
   {
     "name": "Mani",
@@ -776,7 +844,8 @@ const people = [
     "date_confidence": "medium",
     "identity_confidence": "high",
     "heretic": true,
-    "notes": "Manichaeism is regarded by the Church as a heretical religious movement incorporating Christian elements into a radically dualistic system."
+    "notes": "Manichaeism is regarded by the Church as a heretical religious movement incorporating Christian elements into a radically dualistic system.",
+    "p": 5
   },
   {
     "name": "Bardaisan of Edessa",
@@ -788,7 +857,8 @@ const people = [
     "date_confidence": "medium",
     "identity_confidence": "high",
     "heretic": false,
-    "notes": "His precise theological position is debated. Later writers sometimes associate him with heterodox teachings, but he is not as straightforward a case as Mani or Marcion."
+    "notes": "His precise theological position is debated. Later writers sometimes associate him with heterodox teachings, but he is not as straightforward a case as Mani or Marcion.",
+    "p": 5
   },
   {
     "name": "Julius Africanus",
@@ -800,7 +870,8 @@ const people = [
     "date_confidence": "medium",
     "identity_confidence": "high",
     "heretic": false,
-    "notes": "An important early Christian figure in the development of universal Christian historical chronology."
+    "notes": "An important early Christian figure in the development of universal Christian historical chronology.",
+    "p": 4
   },
   {
     "name": "Minucius Felix",
@@ -812,7 +883,8 @@ const people = [
     "date_confidence": "low",
     "identity_confidence": "medium",
     "heretic": false,
-    "notes": "His exact dates are uncertain."
+    "notes": "His exact dates are uncertain.",
+    "p": 5
   },
   {
     "name": "Commodianus",
@@ -824,7 +896,8 @@ const people = [
     "date_confidence": "low",
     "identity_confidence": "medium",
     "heretic": false,
-    "notes": "The dating and biography of Commodianus are uncertain."
+    "notes": "The dating and biography of Commodianus are uncertain.",
+    "p": 5
   },
   {
     "name": "Arnobius of Sicca",
@@ -836,7 +909,8 @@ const people = [
     "date_confidence": "medium",
     "identity_confidence": "high",
     "heretic": false,
-    "notes": "His major work was written shortly before or around the beginning of the Constantinian period."
+    "notes": "His major work was written shortly before or around the beginning of the Constantinian period.",
+    "p": 5
   },
   {
     "name": "Lactantius",
@@ -848,7 +922,8 @@ const people = [
     "date_confidence": "medium",
     "identity_confidence": "high",
     "heretic": false,
-    "notes": "His major literary activity spans the end of the pre-Nicene period and the beginning of the Constantinian era."
+    "notes": "His major literary activity spans the end of the pre-Nicene period and the beginning of the Constantinian era.",
+    "p": 3
   },
   {
     "name": "Peter of Alexandria",
@@ -860,7 +935,8 @@ const people = [
     "date_confidence": "medium",
     "identity_confidence": "high",
     "heretic": false,
-    "notes": "His death falls just before the Council of Nicaea."
+    "notes": "His death falls just before the Council of Nicaea.",
+    "p": 4
   },
   {
     "name": "Methodius of Olympus",
@@ -872,7 +948,8 @@ const people = [
     "date_confidence": "low",
     "identity_confidence": "high",
     "heretic": false,
-    "notes": "His exact episcopal see and death circumstances are debated."
+    "notes": "His exact episcopal see and death circumstances are debated.",
+    "p": 5
   },
   {
     "name": "Lucian of Antioch",
@@ -884,7 +961,8 @@ const people = [
     "date_confidence": "medium",
     "identity_confidence": "high",
     "heretic": false,
-    "notes": "Traditionally martyred under Maximinus Daia."
+    "notes": "Traditionally martyred under Maximinus Daia.",
+    "p": 5
   },
   {
     "name": "Meletius of Lycopolis",
@@ -896,7 +974,8 @@ const people = [
     "date_confidence": "low",
     "identity_confidence": "high",
     "heretic": false,
-    "notes": "His movement was schismatic rather than straightforwardly doctrinally heretical."
+    "notes": "His movement was schismatic rather than straightforwardly doctrinally heretical.",
+    "p": 5
   },
 
   {
@@ -909,7 +988,8 @@ const people = [
     "date_confidence": "high",
     "identity_confidence": "high",
     "heretic": false,
-    "notes": "A central figure in the Nicene controversy and one of the most important theologians of the fourth-century Church."
+    "notes": "A central figure in the Nicene controversy and one of the most important theologians of the fourth-century Church.",
+    "p": 2
   },
   {
     "name": "Anthony the Great",
@@ -921,7 +1001,8 @@ const people = [
     "date_confidence": "medium",
     "identity_confidence": "high",
     "heretic": false,
-    "notes": "His life, written by Athanasius, became enormously influential in spreading the ideal of Christian monasticism."
+    "notes": "His life, written by Athanasius, became enormously influential in spreading the ideal of Christian monasticism.",
+    "p": 3
   },
   {
     "name": "Alexander of Alexandria",
@@ -933,7 +1014,8 @@ const people = [
     "date_confidence": "medium",
     "identity_confidence": "high",
     "heretic": false,
-    "notes": "Athanasius served as his deacon and secretary."
+    "notes": "Athanasius served as his deacon and secretary.",
+    "p": 3
   },
   {
     "name": "Arius",
@@ -945,7 +1027,8 @@ const people = [
     "date_confidence": "medium",
     "identity_confidence": "high",
     "heretic": true,
-    "notes": "The Nicene Council condemned his teaching; later forms of Arianism continued to influence parts of the Roman Empire."
+    "notes": "The Nicene Council condemned his teaching; later forms of Arianism continued to influence parts of the Roman Empire.",
+    "p": 3
   },
   {
     "name": "Hosius of Corduba",
@@ -957,7 +1040,8 @@ const people = [
     "date_confidence": "medium",
     "identity_confidence": "high",
     "heretic": false,
-    "notes": "One of the most important ecclesiastical leaders of the Nicene generation."
+    "notes": "One of the most important ecclesiastical leaders of the Nicene generation.",
+    "p": 5
   },
   {
     "name": "Eusebius of Caesarea",
@@ -969,7 +1053,8 @@ const people = [
     "date_confidence": "medium",
     "identity_confidence": "high",
     "heretic": false,
-    "notes": "His theological position during the Arian controversy was complex, but he was not a simple representative of the later Arian movement."
+    "notes": "His theological position during the Arian controversy was complex, but he was not a simple representative of the later Arian movement.",
+    "p": 4
   },
   {
     "name": "Eusebius of Nicomedia",
@@ -981,7 +1066,8 @@ const people = [
     "date_confidence": "medium",
     "identity_confidence": "high",
     "heretic": true,
-    "notes": "His precise theological classification is complicated by the diversity of positions within the anti-Nicene movement, but he is generally associated with the Arian cause."
+    "notes": "His precise theological classification is complicated by the diversity of positions within the anti-Nicene movement, but he is generally associated with the Arian cause.",
+    "p": 4
   },
   {
     "name": "Pachomius the Great",
@@ -993,7 +1079,8 @@ const people = [
     "date_confidence": "medium",
     "identity_confidence": "high",
     "heretic": false,
-    "notes": "His communities helped transform monasticism from a collection of solitary ascetics into organized communal institutions."
+    "notes": "His communities helped transform monasticism from a collection of solitary ascetics into organized communal institutions.",
+    "p": 3
   },
   {
     "name": "Macarius of Egypt",
@@ -1005,7 +1092,8 @@ const people = [
     "date_confidence": "medium",
     "identity_confidence": "medium",
     "heretic": false,
-    "notes": "Some traditions and writings associated with the name Macarius are difficult to assign with certainty to the historical individual."
+    "notes": "Some traditions and writings associated with the name Macarius are difficult to assign with certainty to the historical individual.",
+    "p": 3
   },
   {
     "name": "Paphnutius of Thebes",
@@ -1017,7 +1105,8 @@ const people = [
     "date_confidence": "low",
     "identity_confidence": "medium",
     "heretic": false,
-    "notes": "The details of his life are partly preserved through later tradition."
+    "notes": "The details of his life are partly preserved through later tradition.",
+    "p": 4
   },
   {
     "name": "Spyridon of Trimythous",
@@ -1029,7 +1118,8 @@ const people = [
     "date_confidence": "low",
     "identity_confidence": "medium",
     "heretic": false,
-    "notes": "A prominent figure in Orthodox tradition; the details of his biography are heavily shaped by later hagiography."
+    "notes": "A prominent figure in Orthodox tradition; the details of his biography are heavily shaped by later hagiography.",
+    "p": 4
   },
   {
     "name": "James of Nisibis",
@@ -1041,7 +1131,8 @@ const people = [
     "date_confidence": "low",
     "identity_confidence": "high",
     "heretic": false,
-    "notes": "An important representative of the eastern and Syriac Christian world."
+    "notes": "An important representative of the eastern and Syriac Christian world.",
+    "p": 5
   },
   {
     "name": "Ephrem the Syrian",
@@ -1053,7 +1144,8 @@ const people = [
     "date_confidence": "medium",
     "identity_confidence": "high",
     "heretic": false,
-    "notes": "His life and work connect the Nicene era with the flourishing of fourth-century Christian theology and hymnography."
+    "notes": "His life and work connect the Nicene era with the flourishing of fourth-century Christian theology and hymnography.",
+    "p": 2
   },
   {
     "name": "Hilary of Poitiers",
@@ -1065,7 +1157,8 @@ const people = [
     "date_confidence": "medium",
     "identity_confidence": "high",
     "heretic": false,
-    "notes": "Often called the 'Athanasius of the West' for his defense of Nicene faith."
+    "notes": "Often called the 'Athanasius of the West' for his defense of Nicene faith.",
+    "p": 4
   },
 //  {
 //    "name": "Eusebius of Vercelli",
@@ -1077,7 +1170,8 @@ const people = [
 //    "date_confidence": "medium",
 //    "identity_confidence": "high",
 //    "heretic": false,
-//    "notes": "An important representative of the Western Nicene resistance."
+//    "notes": "An important representative of the Western Nicene resistance.",
+//    "p": 4
 //  },
   {
     "name": "Lucifer of Cagliari",
@@ -1089,7 +1183,8 @@ const people = [
     "date_confidence": "medium",
     "identity_confidence": "high",
     "heretic": true,
-    "notes": "A useful example of the distinction between doctrinal orthodoxy and later schism."
+    "notes": "A useful example of the distinction between doctrinal orthodoxy and later schism.",
+    "p": 5
   },
 
   {
@@ -1103,7 +1198,8 @@ const people = [
     "identity_confidence": "medium",
     "historicity": "traditional",
     "heretic": false,
-    "notes": "The Gospel identifies the woman but does not give her name; Photini is the traditional name in Eastern Christianity."
+    "notes": "The Gospel identifies the woman but does not give her name; Photini is the traditional name in Eastern Christianity.",
+    "p": 4
   },
   {
     "name": "Longinus",
@@ -1116,7 +1212,8 @@ const people = [
     "identity_confidence": "low",
     "historicity": "traditional",
     "heretic": false,
-    "notes": "The Gospel of John does not name the soldier who pierced Christ's side; Longinus is the later traditional identification."
+    "notes": "The Gospel of John does not name the soldier who pierced Christ's side; Longinus is the later traditional identification.",
+    "p": 4
   },
   {
     "name": "Stephen",
@@ -1129,7 +1226,8 @@ const people = [
     "identity_confidence": "high",
     "historicity": "historical",
     "heretic": false,
-    "notes": "His martyrdom is narrated in Acts 6–7."
+    "notes": "His martyrdom is narrated in Acts 6–7.",
+    "p": 3
   },
   {
     "name": "Perpetua",
@@ -1142,7 +1240,8 @@ const people = [
     "identity_confidence": "high",
     "historicity": "historical",
     "heretic": false,
-    "notes": "Martyred at Carthage during the persecution of Septimius Severus."
+    "notes": "Martyred at Carthage during the persecution of Septimius Severus.",
+    "p": 3
   },
 //  {
 //    "name": "Speratus",
@@ -1155,7 +1254,8 @@ const people = [
 //    "identity_confidence": "high",
 //    "historicity": "historical",
 //    "heretic": false,
-//    "notes": "The Scillitan Martyrs were executed in 180."
+//    "notes": "The Scillitan Martyrs were executed in 180.",
+//    "p": 5
 //  },
   {
     "name": "Pothinus of Lyons",
@@ -1168,7 +1268,8 @@ const people = [
     "identity_confidence": "high",
     "historicity": "historical",
     "heretic": false,
-    "notes": "Among the earliest known bishops and martyrs of the Church in Gaul."
+    "notes": "Among the earliest known bishops and martyrs of the Church in Gaul.",
+    "p": 2
   },
   {
     "name": "Thecla",
@@ -1181,7 +1282,8 @@ const people = [
     "identity_confidence": "medium",
     "historicity": "traditional",
     "heretic": false,
-    "notes": "The Acts of Paul and Thecla is an early Christian text, but the details of her biography are difficult to establish historically."
+    "notes": "The Acts of Paul and Thecla is an early Christian text, but the details of her biography are difficult to establish historically.",
+    "p": 5
   },
   {
     "name": "Nicholas of Myra",
@@ -1194,7 +1296,8 @@ const people = [
     "identity_confidence": "medium",
     "historicity": "traditional_historical",
     "heretic": false,
-    "notes": "A historical bishop probably existed, but the details of the familiar biography are heavily shaped by later tradition."
+    "notes": "A historical bishop probably existed, but the details of the familiar biography are heavily shaped by later tradition.",
+    "p": 2
   },
   {
     "name": "Sebastian of Rome",
@@ -1206,21 +1309,20 @@ const people = [
     "date_confidence": "very_low",
     "identity_confidence": "low",
     "historicity": "traditional",
-    "heretic": false,
-    "notes": "A highly influential martyr in later Christian devotion, though the details of his biography are uncertain."
+    "notes": "A highly influential martyr in later Christian devotion, though the details of his biography are uncertain.",
+    "p": 4
   },
   {
-    "name": "George",
+    "name": "St George",
     "birth_range": [270, 285],
     "death_range": [303, 305],
     "category": ["soldier", "martyr", "saint"],
-    "biography": "Traditional Christian soldier and great martyr whose steadfastness under persecution made him one of the most widely venerated saints of the early Church.",
+    "biography": "Soldier and great martyr whose steadfastness under persecution made him one of the most widely venerated saints of the early Church.",
     "date_basis": "tradition",
     "date_confidence": "low",
     "identity_confidence": "medium",
     "historicity": "traditional_historical",
-    "heretic": false,
-    "notes": "The historical existence of an early martyr George is plausible, but the later dragon-slaying narrative is legendary."
+    "p": 3
   },
   {
     "name": "Victor of Marseilles",
@@ -1233,7 +1335,8 @@ const people = [
     "identity_confidence": "medium",
     "historicity": "traditional_historical",
     "heretic": false,
-    "notes": "A representative of the many military martyrs remembered from the Great Persecution."
+    "notes": "A representative of the many military martyrs remembered from the Great Persecution.",
+    "p": 5
   },
 //  {
 //    "name": "Maurice of the Theban Legion",
@@ -1246,7 +1349,8 @@ const people = [
 //    "identity_confidence": "low",
 //    "historicity": "traditional",
 //    "heretic": false,
-//    "notes": "The historical details of the Theban Legion account are debated."
+//    "notes": "The historical details of the Theban Legion account are debated.",
+//    "p": 5
 //  },
   {
     "name": "Lucy of Syracuse",
@@ -1259,7 +1363,8 @@ const people = [
     "identity_confidence": "medium",
     "historicity": "traditional_historical",
     "heretic": false,
-    "notes": "One of the most widely venerated female martyrs of late antiquity."
+    "notes": "One of the most widely venerated female martyrs of late antiquity.",
+    "p": 4
   },
   {
     "name": "Catherine of Alexandria",
@@ -1272,7 +1377,8 @@ const people = [
     "identity_confidence": "low",
     "historicity": "traditional",
     "heretic": false,
-    "notes": "Her cult became highly influential, though the historical details of her life are uncertain."
+    "notes": "Her cult became highly influential, though the historical details of her life are uncertain.",
+    "p": 3
   },
 
   {
@@ -1286,7 +1392,8 @@ const people = [
     "identity_confidence": "medium",
     "historicity": "traditional_historical",
     "heretic": false,
-    "notes": "His traditional commemoration is closely associated with the persecution under Maximian; the details of his biography are difficult to establish independently."
+    "notes": "His traditional commemoration is closely associated with the persecution under Maximian; the details of his biography are difficult to establish independently.",
+    "p": 3
   },
 //  {
 //    "name": "Nestor of Thessalonica",
@@ -1299,34 +1406,37 @@ const people = [
 //    "identity_confidence": "medium",
 //    "historicity": "traditional_historical",
 //    "heretic": false,
-//    "notes": "The traditional account explicitly presents him as a disciple or spiritual protégé of Demetrius."
+//    "notes": "The traditional account explicitly presents him as a disciple or spiritual protégé of Demetrius.",
+//    "p": 5
 //  },
-//  {
-//    "name": "Theodore the Recruit",
-//    "birth_range": [270, 285],
-//    "death_range": [306, 306],
-//    "category": ["soldier", "martyr", "great_martyr", "saint"],
-//    "biography": "Christian soldier traditionally martyred at Euchaita after refusing to sacrifice to pagan gods.",
-//    "date_basis": "tradition",
-//    "date_confidence": "low",
-//    "identity_confidence": "medium",
-//    "historicity": "traditional_historical",
-//    "heretic": false,
-//    "notes": "Also known as Theodore Tiro or Theodore the Recruit."
-//  },
-//  {
-//    "name": "Theodore Stratelates",
-//    "birth_range": [270, 285],
-//    "death_range": [319, 319],
-//    "category": ["soldier", "martyr", "great_martyr", "saint"],
-//    "biography": "Traditional Christian military commander who was martyred after publicly confessing Christ.",
-//    "date_basis": "tradition",
-//    "date_confidence": "low",
-//    "identity_confidence": "low",
-//    "historicity": "traditional",
-//    "heretic": false,
-//    "notes": "The relationship between the traditions of Theodore Stratelates and Theodore the Recruit is historically complicated."
-//  },
+  {
+    "name": "Theodore the Recruit",
+    "birth_range": [270, 285],
+    "death_range": [306, 306],
+    "category": ["soldier", "martyr", "great_martyr", "saint"],
+    "biography": "Christian soldier traditionally martyred at Euchaita after refusing to sacrifice to pagan gods.",
+    "date_basis": "tradition",
+    "date_confidence": "low",
+    "identity_confidence": "medium",
+    "historicity": "traditional_historical",
+    "heretic": false,
+    "notes": "Also known as Theodore Tiro or Theodore the Recruit.",
+    "p": 5
+  },
+  {
+    "name": "Theodore Stratelates",
+    "birth_range": [270, 285],
+    "death_range": [319, 319],
+    "category": ["soldier", "martyr", "great_martyr", "saint"],
+    "biography": "Traditional Christian military commander who was martyred after publicly confessing Christ.",
+    "date_basis": "tradition",
+    "date_confidence": "low",
+    "identity_confidence": "low",
+    "historicity": "traditional",
+    "heretic": false,
+    "notes": "The relationship between the traditions of Theodore Stratelates and Theodore the Recruit is historically complicated.",
+    "p": 5
+  },
   {
     "name": "Menas of Egypt",
     "birth_range": [270, 285],
@@ -1338,7 +1448,8 @@ const people = [
     "identity_confidence": "medium",
     "historicity": "traditional_historical",
     "heretic": false,
-    "notes": "One of the most widely venerated military martyrs of Egypt and the Christian East."
+    "notes": "One of the most widely venerated military martyrs of Egypt and the Christian East.",
+    "p": 4
   },
   {
     "name": "Mercurius of Caesarea",
@@ -1351,22 +1462,24 @@ const people = [
     "identity_confidence": "low",
     "historicity": "traditional",
     "heretic": false,
-    "notes": "The chronology of the different traditions associated with Mercurius is uncertain."
+    "notes": "The chronology of the different traditions associated with Mercurius is uncertain.",
+    "p": 3
   },
 
-//  {
-//    "name": "Anastasia of Sirmium",
-//    "birth_range": [270, 285],
-//    "death_range": [304, 305],
-//    "category": ["martyr", "great_martyr", "woman_saint"],
-//    "biography": "Christian woman traditionally martyred during the Great Persecution and remembered for ministering to imprisoned Christians.",
-//    "date_basis": "tradition",
-//    "date_confidence": "low",
-//    "identity_confidence": "medium",
-//    "historicity": "traditional_historical",
-//    "heretic": false,
-//    "notes": "One of the most important female martyrs of the late Roman persecutions."
-//  },
+  {
+    "name": "Anastasia of Sirmium",
+    "birth_range": [270, 285],
+    "death_range": [304, 305],
+    "category": ["martyr", "great_martyr", "woman_saint"],
+    "biography": "Christian woman traditionally martyred during the Great Persecution and remembered for ministering to imprisoned Christians.",
+    "date_basis": "tradition",
+    "date_confidence": "low",
+    "identity_confidence": "medium",
+    "historicity": "traditional_historical",
+    "heretic": false,
+    "notes": "One of the most important female martyrs of the late Roman persecutions.",
+    "p": 5
+  },
   {
     "name": "Barbara of Heliopolis",
     "birth_range": [270, 290],
@@ -1378,7 +1491,8 @@ const people = [
     "identity_confidence": "low",
     "historicity": "traditional",
     "heretic": false,
-    "notes": "One of the most prominent traditional female martyrs of the Great Persecution."
+    "notes": "One of the most prominent traditional female martyrs of the Great Persecution.",
+    "p": 4
   },
   {
     "name": "Marina of Antioch",
@@ -1391,21 +1505,23 @@ const people = [
     "identity_confidence": "low",
     "historicity": "traditional",
     "heretic": false,
-    "notes": "Known in the West as Margaret of Antioch; the historical basis of the developed legend is uncertain."
+    "notes": "Known in the West as Margaret of Antioch; the historical basis of the developed legend is uncertain.",
+    "p": 4
   },
-//  {
-//    "name": "Juliana of Nicomedia",
-//    "birth_range": [280, 295],
-//    "death_range": [304, 305],
-//    "category": ["virgin", "martyr", "woman_saint"],
-//    "biography": "Traditional Christian virgin and martyr associated with Nicomedia during the persecution of Diocletian.",
-//    "date_basis": "tradition",
-//    "date_confidence": "very_low",
-//    "identity_confidence": "low",
-//    "historicity": "traditional",
-//    "heretic": false,
-//    "notes": "A major female martyr in the eastern Christian calendar."
-//  },
+  {
+    "name": "Juliana of Nicomedia",
+    "birth_range": [280, 295],
+    "death_range": [304, 305],
+    "category": ["virgin", "martyr", "woman_saint"],
+    "biography": "Traditional Christian virgin and martyr associated with Nicomedia during the persecution of Diocletian.",
+    "date_basis": "tradition",
+    "date_confidence": "very_low",
+    "identity_confidence": "low",
+    "historicity": "traditional",
+    "heretic": false,
+    "notes": "A major female martyr in the eastern Christian calendar.",
+    "p": 5
+  },
   {
     "name": "Irene of Thessalonica",
     "birth_range": [270, 290],
@@ -1417,7 +1533,8 @@ const people = [
     "identity_confidence": "low",
     "historicity": "traditional",
     "heretic": false,
-    "notes": "Often remembered together with her sisters Agape and Chionia."
+    "notes": "Often remembered together with her sisters Agape and Chionia.",
+    "p": 4
   },
   {
     "name": "Euphemia of Chalcedon",
@@ -1430,7 +1547,8 @@ const people = [
     "identity_confidence": "medium",
     "historicity": "traditional_historical",
     "heretic": false,
-    "notes": "Her name is particularly associated with the later Council of Chalcedon through the famous tradition of her relics."
+    "notes": "Her name is particularly associated with the later Council of Chalcedon through the famous tradition of her relics.",
+    "p": 4
   },
 //  {
 //    "name": "Mariamne",
@@ -1443,7 +1561,8 @@ const people = [
 //    "identity_confidence": "low",
 //    "historicity": "traditional",
 //    "heretic": false,
-//    "notes": "A significant traditional female missionary of the apostolic age."
+//    "notes": "A significant traditional female missionary of the apostolic age.",
+//    "p": 5
 //  },
 //  {
 //    "name": "Domnina",
@@ -1456,9 +1575,9 @@ const people = [
 //    "identity_confidence": "low",
 //    "historicity": "traditional",
 //    "heretic": false,
-//    "notes": "Part of the traditional Photini martyr cycle."
+//    "notes": "Part of the traditional Photini martyr cycle.",
+//    "p": 5
 //  },
-
 //  {
 //    "name": "Constantius II",
 //    "birth_range": [317, 317],
@@ -1469,7 +1588,8 @@ const people = [
 //    "date_confidence": "high",
 //    "identity_confidence": "high",
 //    "heretic": false,
-//    "notes": "Not a Church figure, but highly relevant to the political history of the Nicene controversy."
+//    "notes": "Not a Church figure, but highly relevant to the political history of the Nicene controversy.",
+//    "p": 5
 //  },
   {
     "name": "Constantine the Great",
@@ -1481,47 +1601,7 @@ const people = [
     "date_confidence": "high",
     "identity_confidence": "high",
     "heretic": false,
-    "notes": "A decisive political figure in the transition from the persecuted Church to the publicly established Christian Church."
+    "notes": "A decisive political figure in the transition from the persecuted Church to the publicly established Christian Church.",
+    "p": 2
   }
-];
-
-const core_figures = [
-  "Jesus Christ",
-  "Peter",
-  "John",
-  "James the brother of the Lord",
-  "Paul",
-  "Matthew",
-  "Andrew",
-  "Thomas",
-  "Philip",
-  "Bartholomew",
-  "James son of Alphaeus",
-  "Jude / Thaddeus",
-  "Simon the Zealot",
-  "Matthias",
-  "Mary the Theotokos",
-  "Barnabas",
-  "Luke",
-  "Mark",
-  "Linus",
-  "Anacletus / Cletus",
-  "Clement of Rome",
-  "Evodius of Antioch",
-  "Ignatius of Antioch",
-  "Simeon of Jerusalem",
-  "Polycarp of Smyrna",
-  "Papias of Hierapolis",
-  "Quadratus of Athens",
-  "Aristides of Athens",
-  "Hermas",
-  "Justin Martyr",
-  "Irenaeus of Lyons",
-  "Hegesippus",
-  "Aquila",
-  "Priscilla",
-  "Silas / Silvanus",
-  "Titus",
-  "Timothy",
-  "Pantaenus"
 ];
