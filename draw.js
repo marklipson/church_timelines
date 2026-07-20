@@ -12,6 +12,7 @@ class Timeline
     this.top_to_bottom = true;
     this.timeline_y = 10;
     this.pix_per_year = 8.5;
+    this.max_detail_level = 2;
   }
 
   year_x(year)
@@ -51,6 +52,8 @@ class Timeline
         //if (! core_figures.includes(person.name))
         //  continue;
         if (person.heretic)
+          continue;
+        if (person.p > this.max_detail_level)
           continue;
         const el = document.createElement("span");
         this.div.appendChild(el);
@@ -100,7 +103,7 @@ class Timeline
           el.style.bottom = this.slot_y(use_slot) + "px";
         el.style.left = this.year_x(birth) + "px";
         el.style.width = (this.year_x(death) - this.year_x(birth)) + "px";
-        el.setAttribute("title", person.biography)
+        el.setAttribute("title", person.name + ": " + person.biography)
         el.classList.add("person")
         for (const cat of person.category)
         {
@@ -140,19 +143,21 @@ class Timeline
     }
     for (const event of events)
     {
+        if (event.p > this.max_detail_level)
+          continue;
         let tr = event.time_range;
         const el = document.createElement("span");
         this.div.appendChild(el);
         el.innerText = event.name;
         el.setAttribute("title", event.name + ": " + event.description)
         el.classList.add("event")
-        el.style.left = this.year_x(tr[0]) + "px";
-        if (tr[1] - tr[0] < 3)
+        if (tr[1] - tr[0] < 2)
         {
-          tr = [tr[0]-1.1, tr[1]+1.1];
+          tr = [tr[0]-1, tr[1]+1];
         }
+        el.style.left = this.year_x(tr[0]) + "px";
         el.style.width = (this.year_x(tr[1]) - this.year_x(tr[0])) + "px";
-        el.style.top = 32 + "px";
+        el.style.top = (this.top_to_bottom ? 32 : 8) + "px";
         el.style.bottom = 8 + "px";
         for (const cat of event.category)
         {
@@ -273,8 +278,38 @@ class Timeline
     }
   }
 
+  setup()
+  {
+    const ctl = document.getElementById("controls");
+    if (! ctl)
+      return;
+    ctl.innerHTML = `
+      Detail level: <input type="range" id="detail_level" min="0" max="5" value="2" step="1" list="detail_levels"/>
+        <datalist id="detail_levels">
+          <option value="0"></option>
+          <option value="1"></option>
+          <option value="2"></option>
+          <option value="3"></option>
+          <option value="4"></option>
+          <option value="5"></option>
+        </datalist>
+        `;
+    // support detail level control
+    const lvl = document.getElementById("detail_level");
+    lvl.value = this.max_detail_level;
+    const self = this;
+    lvl.addEventListener("input", function() {
+      // redraw
+      self.max_detail_level = parseInt(lvl.value);
+      self.draw();
+    });
+  }
+
   draw()
   {
+    // erase
+    this.div.innerText = "";
+    // draw
     this.draw_years();
     this.draw_people();
     this.draw_events();

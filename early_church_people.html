@@ -17,9 +17,21 @@
   <h1>Early Church Timeline: People and Events</h1>
   <div id="timeline_area">
   </div>
+  <div id="controls">
+    Detail level: <input type="range" id="detail_level" min="0" max="5" value="2" step="1" list="detail_levels"/>
+    <datalist id="detail_levels">
+      <option value="0"></option>
+      <option value="1"></option>
+      <option value="2"></option>
+      <option value="3"></option>
+      <option value="4"></option>
+      <option value="5"></option>
+    </datalist>
+  </div>
 </body>
 <script>
   const timeline = new Timeline("timeline_area", [-10, 330]);
+  timeline.setup();
   timeline.draw();
 </script>
 </html>

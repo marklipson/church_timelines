@@ -20,6 +20,9 @@ h1 {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
+#detail_level {
+  width: 300px;
+}
 #timeline_area {
   flex-grow: 1;
   min-height: 0;
@@ -37,7 +40,7 @@ h1 {
 }
 .time_axis {
   font-weight: bold;
-  transform: translateX(-80%);
+  transform: translateX(-50%);
 }
 .person {
   font-size: 95%;
@@ -143,7 +146,7 @@ span.emperor {
   text-align: right;
   padding-bottom: 8px;
   opacity: 0.5;
-  transform: translateX(-50%);
+  /*transform: translateX(-50%);*/
 }
 .event.emphasize {
   z-index: 3;
