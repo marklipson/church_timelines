@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Church Timeline: Iconoclasm</title>
+    <script src="iconoclasm_data.js"></script>
+    <script src="draw.js"></script>
+    <link rel="stylesheet" href="timeline.css"/>
+    <style>
+        .event.cat_non_council {
+          background-color: #c04040;
+          color: #ffe0e0;
+        }
+        .event.cat_ecumenical_council {
+          color: #e0e0e0;
+          background-color: #807020;
+          box-shadow: 0 0 10px #fff,
+              0 0 15px #ffea80;
+        }
+        .event.cat_synod {
+          color: #e0e0e0;
+          background-color: #706040;
+          box-shadow: 0 0 6px #fff,
+              0 0 10px #ffea80;
+        }
+    </style>
+</head>
+<body>
+  <h1>Church Timeline: Iconoclasm</h1>
+  <div id="timeline_area"></div>
+  <div id="controls"></div>
+</body>
+<script>
+  const timeline = new Timeline("timeline_area", [30, 1600], {pix_per_year: 6.0});
+  timeline.setup();
+  timeline.draw();
+  timeline.scroll_to_year(787, "instant");
+  /*
+    TODO: more coloring & categorization
+    TODO: include all the arguments somewhere
+  */
+</script>
+</html>

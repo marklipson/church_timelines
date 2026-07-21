@@ -3,16 +3,17 @@
  */
 class Timeline
 {
-  constructor(div_id, time_range)
+  constructor(div_id, time_range, options)
   {
+    options = options || {};
     this.div = document.getElementById(div_id);
     this.svg = null;
     this.time_range = time_range;
-    this.time_step = 10;
+    this.time_step = options?.time_step??10;
     this.top_to_bottom = true;
     this.timeline_y = 10;
-    this.pix_per_year = 8.5;
-    this.max_detail_level = 2;
+    this.pix_per_year = options?.pix_per_year??8.5;
+    this.max_detail_level = options?.max_detail_level??2;
   }
 
   year_x(year)
@@ -147,13 +148,15 @@ class Timeline
           continue;
         let tr = event.time_range;
         const el = document.createElement("span");
-        this.div.appendChild(el);
-        el.innerText = event.name;
-        el.setAttribute("title", event.name + ": " + event.description)
         el.classList.add("event")
-        if (tr[1] - tr[0] < 2)
+        el.setAttribute("title", event.name + ": " + event.description)
+        el.innerHTML = event.name;
+        this.div.appendChild(el);
+        const min_w = (parseFloat(window.getComputedStyle(el).fontSize) + 4)/this.pix_per_year;
+        const underflow = min_w - (tr[1] - tr[0]);
+        if (underflow > 0)
         {
-          tr = [tr[0]-1, tr[1]+1];
+          tr = [tr[0]-underflow/2, tr[1]+underflow/2];
         }
         el.style.left = this.year_x(tr[0]) + "px";
         el.style.width = (this.year_x(tr[1]) - this.year_x(tr[0])) + "px";
@@ -314,6 +317,15 @@ class Timeline
     this.draw_people();
     this.draw_events();
     this.setup_selection();
+  }
+
+  scroll_to_year(year, behavior)
+  {
+    const x = this.year_x(year) - this.div.clientWidth/2;
+    this.div.scrollTo({
+      left: x,
+      behavior: behavior || "smooth"
+    });
   }
 
 }
