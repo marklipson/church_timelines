@@ -15,11 +15,12 @@
 </head>
 <body>
   <h1>Early Church Timeline: People and Events</h1>
-  <div id="timeline_area">
-  </div>
+  <div id="timeline_area"></div>
+  <div id="controls"></div>
 </body>
 <script>
   const timeline = new Timeline("timeline_area", [-10, 330]);
+  timeline.setup();
   timeline.draw();
 </script>
 </html>

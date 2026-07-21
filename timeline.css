@@ -20,6 +20,9 @@ h1 {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
+#detail_level {
+  width: 300px;
+}
 #timeline_area {
   flex-grow: 1;
   min-height: 0;
@@ -37,10 +40,10 @@ h1 {
 }
 .time_axis {
   font-weight: bold;
-  transform: translateX(-80%);
+  transform: translateX(-50%);
 }
 .person {
-  font-size: 95%;
+  font-size: 19px;
   border: solid 1px #505050;
   background-color: #d0d0d0;
   text-align: center;
@@ -88,7 +91,7 @@ h1 {
 .person.cat_mother_of_god {
   background-color: #c0e0ff;
 }
-.person.selected {
+.person.selected, .event.selected {
   font-weight: bold;
   color: white;
   background-color: #202080;
@@ -132,18 +135,23 @@ span.emperor {
   to {opacity: 0.8;}
 }
 .event {
-  font-size: 95%;
+  font-size: 20px;
   border: solid 1px #808080;
   color: #c0c0c0;
   background-color: #303030;
   text-align: center;
   cursor: pointer;
   writing-mode: vertical-rl;
+
+  display: flex;
+  align-items: center;     /* horizontal centering */
+  justify-content: right; /* vertical centering */
+
   z-index: 1;
   text-align: right;
   padding-bottom: 8px;
   opacity: 0.5;
-  transform: translateX(-50%);
+  /*transform: translateX(-50%);*/
 }
 .event.emphasize {
   z-index: 3;
@@ -191,6 +199,10 @@ span.emperor {
 .detail_pane h2 {
   margin: 0 0 10px 0;
   border-bottom: solid 1px #c0c0c0;
+}
+.detail_pane .time_range {
+  color: #606060;
+  font-size: 80%;
 }
 .detail_pane img {
   float: right;
