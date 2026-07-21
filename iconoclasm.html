@@ -5,7 +5,6 @@
     <title>Church Timeline: Iconoclasm</title>
     <script src="iconoclasm_data.js"></script>
     <script src="draw.js"></script>
-    <link rel="stylesheet" href="timeline.css"/>
     <style>
         .event.cat_non_council {
           background-color: #c04040;
@@ -23,7 +22,14 @@
           box-shadow: 0 0 6px #fff,
               0 0 10px #ffea80;
         }
+        .event.cat_hint {
+          color: #808080;
+          background-color: #e0e0e0;
+          border-color: #c0c0c0;
+          /*justify-content: center; */
+        }
     </style>
+    <link rel="stylesheet" href="timeline.css"/>
 </head>
 <body>
   <h1>Church Timeline: Iconoclasm</h1>
@@ -31,7 +37,13 @@
   <div id="controls"></div>
 </body>
 <script>
-  const timeline = new Timeline("timeline_area", [30, 1600], {pix_per_year: 6.0});
+  const timeline = new Timeline("timeline_area", [0, 1670], {
+    pix_per_year: 6.0,
+    detail_settings: {
+      0: {time_range: [650, 900], pix_per_year: 10},
+      1: {time_range: [650, 900], pix_per_year: 10}
+    }
+  });
   timeline.setup();
   timeline.draw();
   timeline.scroll_to_year(787, "instant");

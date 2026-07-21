@@ -76,7 +76,7 @@ const people = [
     "name": "Nikephoros I of Constantinople",
     "birth_range": [750, 758],
     "death_range": [828, 828],
-    "category": ["bishop", "theologian"],
+    "category": ["bishop", "theologian", "writer"],
     "biography": "Patriarch of Constantinople from 806 to 815 and a major defender of icons during the renewed iconoclast crisis under Leo V. He opposed the restoration of iconoclasm and was deposed and exiled after refusing to accept the imperial policy.",
     "notes": "His theological writings became important sources for the later iconophile defense.",
     "p": 2
@@ -242,14 +242,6 @@ const people = [
     "p": 2
   },
   {
-    "name": "Nikephoros I of Constantinople",
-    "birth_range": [750, 758],
-    "death_range": [828, 828],
-    "category": ["bishop", "theologian", "writer"],
-    "biography": "The patriarch and theologian who wrote major defenses of icons during the second iconoclast period, including the Apologeticus Minor and the Antirrhetici. He argued against the iconoclast interpretation of Scripture and patristic tradition and defended the legitimacy of depicting Christ and the saints. His writings were among the principal intellectual resources of the iconophile resistance before the final restoration of icons.",
-    "p": 2
-  },
-  {
     "name": "Eusebius of Caesarea",
     "birth_range": [260, 265],
     "death_range": [339, 340],
@@ -351,7 +343,7 @@ const relationships = [
 ];
 const events = [
   {
-    "name": "The Incarnation: foundation of veneration of holy images",
+    "name": "The Incarnation: foundation of icon/veneration theology",
     "time_range": [0, 33],
     "category": [],
     "description": "The Son is the express Image of the Father. Though the Godhead is invisible and uncircumscribed, the Word became flesh and was seen among men, assuming the fullness of human nature in all things except sin. Therefore the One who was formerly invisible has become visible in the flesh, and may be represented according to His humanity. As the saints are members of Christ and our elder brethren, glorified in Him, so their honor is referred to the God who glorified them; and their intercession is sought as the prayer of those who stand alive before God.",
@@ -367,9 +359,9 @@ const events = [
   },
   {
     "name": "Public veneration of saints",
-    "time_range": [317, 330],
+    "time_range": [317, 317],
     "category": [],
-    "description": "When the persecution of the Church had ceased and Christians were free to worship openly, the honor given to the saints assumed public and monumental form. Basilicas were raised over the tombs of martyrs, their relics were solemnly translated, and the faithful gathered to commemorate them and seek their prayers. The veneration of holy images would later develop within this same Christian understanding: the honor shown to the image passes to the person represented.",
+    "description": "When the persecution of the Church had ceased and Christians were free to worship openly, the honor given to the saints assumed public and monumental form. Basilicas were raised over the tombs of martyrs, their relics were solemnly translated, and the faithful gathered to commemorate them and seek their prayers. The veneration of holy images would later develop within this same Christian understanding: the honor shown to the image passes to the person represented.  (Date given is for the Edict of Milan.)",
     "p": 2
   },
   {
@@ -382,9 +374,10 @@ const events = [
 
   {
     "name": "Scroll this way to see related history &#8595;",
-    "time_range": [640, 660],
-    "category": [],
+    "time_range": [660, 670],
+    "category": ["hint"],
     "description": "Scroll to the left to see the Fathers whose writings were later summoned as witnesses in the controversy, together with the events and persons whose lives illuminate the history of the Church's defense of holy images.",
+    "popup": false,
     "p": 2
   },
 
@@ -405,8 +398,8 @@ const events = [
   {
     "name": "Council of Hieria",
     "time_range": [754, 754],
-    "category": ["non_council"],
-    "description": "Convened by Emperor Constantine V and attended by approximately 338 bishops, this imperial council condemned the production and veneration of icons and anathematized leading defenders of icons, including St. Germanus of Constantinople and St. John of Damascus. It claimed ecumenical authority but was later rejected as an invalid or non-ecumenical council.",
+    "category": ["non_council", "coercion"],
+    "description": "Convened by Emperor Constantine V during the first period of Byzantine iconoclasm, this council assembled approximately 340 bishops to condemn the veneration of holy images. Its proceedings took place under intense imperial sponsorship and coercive political conditions, while the see of Constantinople was vacant after the forced resignation of the iconophile Patriarch Constantine II. The council therefore lacked the normal participation of the principal patriarchal see and was not received by the other ancient patriarchates. Although it presented itself as an ecumenical council and developed a serious Christological argument against icons, it attempted to overturn the Church's received practice and to condemn the defenders of images, including St. John of Damascus, without the universal reception of the Church. Its decrees were consequently rejected by the Orthodox Church, not because a council's numerical size or theological seriousness is irrelevant, but because an assembly acting under imperial coercion cannot by itself overturn the received faith of the Church.",
     "p": 2
   },
   {
@@ -419,14 +412,14 @@ const events = [
   {
     "name": "Council of Frankfurt",
     "time_range": [794, 794],
-    "category": ["western_council", "non_council"],
-    "description": "A council convened under Charlemagne that rejected the conclusions of the Second Council of Nicaea as they were understood through a defective Latin translation of its acts. The Frankish bishops opposed the worship or adoration of images, while not necessarily advocating the complete destruction or prohibition of Christian images. Its position was therefore distinct from the more radical Byzantine iconoclasm of Hieria, but it nevertheless rejected the authority and conclusions of Nicaea II.",
+    "category": ["non_council", "misunderstanding"],
+    "description": "The Frankish bishops rejected the Second Council of Nicaea's teaching on sacred images, largely because its decisions had reached the Latin West through inaccurate translations and were understood to require the worship or adoration of images. The council therefore rejected what it believed to be the Byzantine position, while not abolishing Christian images or rejecting every form of honor shown to them. The resulting controversy illustrates how the mistranslation of the Greek distinction between the worship due to God alone and the veneration offered to holy persons and their images contributed to a temporary Western misunderstanding of the Orthodox position.",
     "p": 3
   },
   {
     "name": "Council of Constantinople under Leo V",
     "time_range": [815, 815],
-    "category": ["non_council"],
+    "category": ["non_council", "coercion"],
     "description": "Convened under Emperor Leo V during the second period of Byzantine iconoclasm, this council revived the condemned teaching of Hieria and sought to overturn the decree of the Seventh Ecumenical Council, which had restored the veneration of holy images. Its appeal to antiquity could not make it a true council of the Church, for the Church does not receive a synod merely because bishops assemble at the emperor's command, nor does a later gathering acquire authority by reversing an already received conciliar judgment. The council's rejection of the Incarnation's consequences for sacred representation was therefore rejected, and the restoration of icons in 843 was understood as the restoration of the Church's received faith.",
     "p": 3
   },
@@ -441,58 +434,57 @@ const events = [
   {
     "name": "No iconoclasm this century, keep scrolling &#8593;",
     "time_range": [900, 910],
-    "category": [],
+    "category": ["hint"],
+    "popup": false,
     "description": "No iconoclasm in the 900s.",
     "p": 2
   },
   {
     "name": "No iconoclasm this century, keep scrolling &#8593;",
     "time_range": [1000, 1010],
-    "category": [],
+    "category": ["hint"],
+    "popup": false,
     "description": "No iconoclasm in the 1000s.",
     "p": 2
   },
   {
     "name": "No iconoclasm this century, keep scrolling &#8593;",
     "time_range": [1100, 1110],
-    "category": [],
+    "category": ["hint"],
+    "popup": false,
     "description": "No iconoclasm in the 1100s.",
     "p": 2
   },
   {
     "name": "No iconoclasm this century, keep scrolling &#8593;",
     "time_range": [1200, 1210],
-    "category": [],
+    "category": ["hint"],
+    "popup": false,
     "description": "No iconoclasm in the 1200s.",
     "p": 2
   },
   {
     "name": "No iconoclasm this century, keep scrolling &#8593;",
     "time_range": [1300, 1310],
-    "category": [],
+    "category": ["hint"],
+    "popup": false,
     "description": "No iconoclasm in the 1300s.",
     "p": 2
   },
   {
     "name": "No iconoclasm this century, keep scrolling &#8593;",
     "time_range": [1400, 1410],
-    "category": [],
+    "category": ["hint"],
+    "popup": false,
     "description": "No iconoclasm in the 1400s.",
     "p": 2
   },
 
   {
-    "name": "Wittenberg Iconoclasm",
-    "time_range": [1522, 1522],
+    "name": "Wittenberg/Zürich Iconoclasm",
+    "time_range": [1522, 1525],
     "category": ["Reformation"],
-    "description": "Andreas Karlstadt and other radical reformers promoted the removal of religious images from churches in Wittenberg. The disturbances helped expose a major division within the Reformation: radical reformers called for the removal or destruction of images, while Martin Luther opposed violent or compulsory iconoclasm and allowed images to remain when they were not treated as objects of worship.",
-    "p": 2
-  },
-  {
-    "name": "Zürich Removal of Religious Images",
-    "time_range": [1524, 1525],
-    "category": ["Reformation"],
-    "description": "Under the influence of Ulrich Zwingli, Zürich conducted an officially organized removal of religious images, statues, and other traditional devotional objects from its churches. The process was presented as a reform of Christian worship based especially on the Second Commandment and the rejection of traditional image-veneration.",
+    "description": "1522: Andreas Karlstadt and other radical reformers promoted the removal of religious images from churches in Wittenberg. The disturbances helped expose a major division within the Reformation: radical reformers called for the removal or destruction of images, while Martin Luther opposed violent or compulsory iconoclasm and allowed images to remain when they were not treated as objects of worship.<p/>1524-1525: Under the influence of Ulrich Zwingli, Zürich conducted an officially organized removal of religious images, statues, and other traditional devotional objects from its churches. The process was presented as a reform of Christian worship based especially on the Second Commandment and the rejection of traditional image-veneration.",
     "p": 2
   },
   {
@@ -508,7 +500,23 @@ const events = [
     "category": ["Reformation"],
     "description": "During the Scottish Reformation, preaching and political upheaval led to widespread destruction and removal of religious images, statues, altars, and other traditional Catholic furnishings from churches. The movement was associated with the Reformed theology promoted by John Knox and his allies.",
     "p": 2
+  },
+
+  {
+    "name": "English Puritan iconoclasm",
+    "time_range": [1642, 1660],
+    "category": ["destruction"],
+    "description": "During the English Civil War and Commonwealth period, Puritan reformers and parliamentary authorities removed or destroyed many religious images, statues, stained-glass windows, crucifixes, and other traditional church furnishings. The Reformation rejection of sacred images thus produced another major wave of practical iconoclasm more than a century after the first Protestant outbreaks.",
+    "p": 2
+  },
+  {
+    "name": "Westminster Confession",
+    "time_range": [1646, 1647],
+    "category": ["non_council"],
+    "description": "The Westminster Assembly gave one of the most systematic expressions of the mature Reformed rejection of religious images, teaching that images of God and the Persons of the Trinity are forbidden and that religious worship must not be offered through images. The rejection of sacred images had now become a settled feature of a major Western Christian confession.",
+    "p": 2
   }
+
 ];
 const relationship_text = {};
 const relationship_inverse = {};
