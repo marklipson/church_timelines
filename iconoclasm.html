@@ -5,31 +5,29 @@
     <title>Church Timeline: Iconoclasm</title>
     <script src="iconoclasm_data.js"></script>
     <script src="draw.js"></script>
+    <link rel="stylesheet" href="timeline.css"/>
     <style>
-        .event.cat_non_council {
+        .cat_iconoclast_council {
           background-color: #c04040;
           color: #ffe0e0;
         }
-        .event.cat_ecumenical_council {
+        .cat_council {
           color: #e0e0e0;
           background-color: #807020;
           box-shadow: 0 0 10px #fff,
               0 0 15px #ffea80;
         }
-        .event.cat_synod {
-          color: #e0e0e0;
-          background-color: #706040;
-          box-shadow: 0 0 6px #fff,
-              0 0 10px #ffea80;
-        }
         .event.cat_hint {
-          color: #808080;
+          color: #606060;
           background-color: #e0e0e0;
           border-color: #c0c0c0;
           /*justify-content: center; */
         }
-    </style>
-    <link rel="stylesheet" href="timeline.css"/>
+        .person.cat_iconclast {
+          background-color: #806060;
+          color: #ffc0c0;
+        }
+     </style>
 </head>
 <body>
   <h1>Church Timeline: Iconoclasm</h1>
@@ -47,6 +45,19 @@
   timeline.setup();
   timeline.draw();
   timeline.scroll_to_year(787, "instant");
+  timeline.draw_key(
+    [
+      {"text": "people:"},
+      {"item": {title: "iconoclast", class: "cat_iconoclast", description: "People who were iconoclasts."}},
+      {"item": {title: "bishop", class: "cat_bishop", description: "Bishops and patriarchs"}},
+      {"item": {title: "monk", class: "cat_monk", description: "Monastics"}},
+      {"item": {title: "writer", class: "cat_writer", description: "People with surviving writings"}},
+      {"item": {title: "emperor/empress", class: "cat_emperor", description: "Emperors and empresses of Byzantium"}},
+      {"text": "<br>events:"},
+      {"item": {title: "iconoclast councils", class: "cat_iconoclast_council", description: "Councils orchestrated through coercion by iconoclast emperors, then later rejected by the Church as soon as feasible."}},
+      {"item": {title: "Church councils and synods", class: "cat_council", description: "Councils gathered and accepted by the Church."}},
+    ]
+  );
   /*
     TODO: more coloring & categorization
     TODO: include all the arguments somewhere

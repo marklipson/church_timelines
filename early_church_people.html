@@ -12,6 +12,12 @@
     <!-- draws timeline -->
     <script src="draw.js"></script>
     <link rel="stylesheet" href="timeline.css"/>
+    <style>
+        .cat_council {
+          color: #e0e0e0;
+          background-color: #809020;
+        }
+    </style>
 </head>
 <body>
   <h1>Early Church Timeline: People and Events</h1>
@@ -22,5 +28,21 @@
   const timeline = new Timeline("timeline_area", [-10, 330]);
   timeline.setup();
   timeline.draw();
+  timeline.draw_key(
+    [
+      {"text": "people:"},
+      {"item": {title: "apostle", class: "cat_apostle", description: "The 12 apostles (see also: evangelists)"}},
+      {"item": {title: "evangelist", class: "cat_evangelist", description: "The writers of the 4 gospels"}},
+      {"item": {title: "martyr", class: "x_martyr", description: "Those who died for Christ (and Christ Himself)"}},
+      {"item": {title: "bishop", class: "cat_bishop", description: "Bishops and patriarchs"}},
+      {"item": {title: "monk", class: "cat_monk", description: "Monastics"}},
+      {"item": {title: "writer", class: "cat_writer", description: "People with surviving writings"}},
+      {"item": {title: "emperor/empress", class: "cat_emperor", description: "Emperors and empresses of Byzantium"}},
+      {"text": "<br>events:"},
+      {"item": {title: "persecutions", class: "cat_persecution-light", description: "Mass killings of Christians."}},
+      {"item": {title: "council", class: "cat_council", description: "Church councils."}},
+      {"item": {title: "other", class: "cat_history", description: "Other historical events."}},
+    ]
+  );
 </script>
 </html>

@@ -20,6 +20,21 @@ h1 {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
+.key {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 13px;
+}
+.key span.title {
+  line-height: 170%;
+}
+.key span.item {
+  border: solid 1px #808080;
+  border-radius: 2px;
+  margin-left: 6px;
+  padding: 1px 4px;
+}
 #detail_level {
   width: 300px;
 }
@@ -54,28 +69,16 @@ h1 {
 .person:hover {
   outline: solid 2px #808080;
 }
-.person.cat_missionary {
-  background-color: #c0d0c0;
-}
-.person.cat_writer {
-  background-color: #c0f0e0;
-}
-.person.cat_monk {
-  background-color: #c0c0c8;
-}
-.person.cat_bishop {
-  background-color: #e0ffe0;
-}
-.person.cat_emperor {
+.cat_emperor {
   background-color: #a0b8f0;
 }
-.person.cat_evangelist {
-  background-color: #fcfada;
-}
-.person.cat_apostle {
+.cat_apostle {
   background-color: #d4ebff;
 }
-.person.cat_heretic {
+.cat_evangelist {
+  background-color: #fcfada;
+}
+.cat_iconoclast {
   background-color: #806060;
   color: #ffc0c0;
 }
@@ -89,7 +92,7 @@ h1 {
       0 0 20px #ffaa00;
 }
 .person.cat_mother_of_god {
-  background-color: #c0e0ff;
+  background-color: #e8e8ff;
 }
 .person.selected, .event.selected {
   font-weight: bold;
@@ -100,36 +103,45 @@ h1 {
   font-weight: bold;
   border-width: 2px;
 }
-span.martyr {
-  font-size: 80%;
-  margin-left: 6px;
-  color: red;
+
+/* symbols before show rank */
+.cat_monk::before {
+  margin-right: 4px;
+  font-size: 90%;
+  font-weight: bold;
+  content: "\271d";
+  color: #404040;
 }
-span.writer {
-  font-size: 80%;
-  margin-left: 6px;
+.cat_bishop::before {
+  margin-right: 4px;
+  font-size: 90%;
+  color: #404040;
+  content: "\265d";
+}
+.cat_emperor::before {
+  margin-right: 4px;
+  font-size: 90%;
+  color: #ffff00;
+  content: "\2654";
+}
+
+/* symbols after show accomplishments */
+.cat_writer::after {
+  margin-left: 4px;
+  font-size: 90%;
+  content: "\1F56E";
   color: green;
 }
-span.bishop {
-  font-size: 80%;
-  margin-left: 6px;
-  color: #808080;
+
+/* extra features - these are inserted as separate child elements after the text */
+.x_martyr::after {
+  margin-left: 4px;
+  font-size: 90%;
+  font-weight: bold;
+  color: red;
+  content: "\2670";
 }
-span.missionary {
-  font-size: 80%;
-  margin-left: 6px;
-  color: #80a080;
-}
-span.monk {
-  font-size: 80%;
-  margin-left: 6px;
-  color: #808080;
-}
-span.emperor {
-  font-size: 80%;
-  margin-left: 6px;
-  color: #f0f080;
-}
+
 @keyframes emphasizeEvents {
   from {opacity: 0.4;}
   to {opacity: 0.8;}
@@ -160,7 +172,7 @@ span.emperor {
   animation-duration: 0.25s;
   animation-timing-function: ease-in;
 }
-.event.cat_divine {
+.cat_biblical {
   color: #e0e0e0;
   background-color: #807020;
   box-shadow: 0 0 8px #fff,
@@ -170,13 +182,13 @@ span.emperor {
   color: #ddd;
   background-color: #b0a080;
 }
-.event.cat_persecution {
+.cat_persecution {
   background-color: #603838;
 }
-.event.cat_persecution-light {
+.cat_persecution-light {
   background-color: #906060;
 }
-.event.cat_persecution-heavy {
+.cat_persecution-heavy {
   background-color: #601818;
   color: #eee;
 }
