@@ -2,14 +2,14 @@ const events = [
   {
     "name": "Pentecost",
     "time_range": [31, 31],
-    "category": ["divine"],
+    "category": ["biblical"],
     "description": "The descent of the Holy Spirit on the disciples.",
     "p": 1
   },
   {
     "name": "Council at Jerusalem",
     "time_range": [49, 49],
-    "category": ["divine"],
+    "category": ["council"],
     "description": "The apostles meet, and agree how to embrace gentiles.",
     "p": 2
   },
@@ -100,15 +100,15 @@ const events = [
   {
     "name": "Edict of Milan",
     "time_range": [317, 317],
-    "category": ["divine"],
+    "category": ["history"],
     "description": "Christianity becomes legal.",
     "p": 2
   },
   {
     "name": "Council of Nicea",
     "time_range": [325, 325],
-    "category": ["divine"],
+    "category": ["council"],
     "description": "Arianism is defeated.",
-    "p": 3
+    "p": 2
   }
 ];

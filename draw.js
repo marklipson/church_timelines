@@ -77,28 +77,7 @@ class Timeline
         el.setAttribute("id", "p_" + person.name.replaceAll(' ', '_'));
         if (person.category.includes("martyr"))
         {
-          el.innerHTML += "<span class='martyr' title='martyr'>&#9840;</span>";
-          // &#9766;
-        }
-        if (person.category.includes("writer") || person.category.includes("evangelist"))
-        {
-          el.innerHTML += "<span class='writer' title='writer'>&#x1F56E;</span>";
-        }
-        if (person.category.includes("bishop"))
-        {
-          el.innerHTML += "<span class='bishop' title='bishop'>&#9821;</span>";
-        }
-        if (person.category.includes("missionary"))
-        {
-          el.innerHTML += "<span class='missionary' title='missionary'>&#9767;</span>";
-        }
-        if (person.category.includes("monk"))
-        {
-          el.innerHTML += "<span class='monk' title='monk'>&#10013;</span>";
-        }
-        if (person.category.includes("emperor"))
-        {
-          el.innerHTML += "<span class='emperor' title='emperor'>&#128081;</span>";
+          el.innerHTML += "<span class='x_martyr' title='martyr'></span>";
         }
         const birth = (person.birth_range[0] + person.birth_range[1])/2;
         let death = (person.death_range[0] + person.death_range[1])/2;
@@ -422,6 +401,36 @@ class Timeline
       left: x,
       behavior: behavior || "smooth"
     });
+  }
+
+  draw_key(content)
+  {
+    // container
+    const key = document.createElement("div");
+    key.classList.add("key");
+    const h1 = document.getElementsByTagName("h1")[0]
+    h1.before(key);
+    for (const part of content)
+    {
+      if (part?.text)
+      {
+        const el = document.createElement("span");
+        el.classList.add("title");
+        el.innerHTML = part.text;
+        key.appendChild(el);
+      }
+      else if (part?.item)
+      {
+        const item = part.item;
+        const el = document.createElement("span");
+        el.classList.add("item");
+        el.innerText = item.title;
+        el.classList.add(item.class);
+        if (item?.description)
+          el.setAttribute("title", item.description)
+        key.appendChild(el);
+      }
+    }
   }
 
 }

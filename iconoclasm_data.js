@@ -4,7 +4,7 @@ const people = [
     "name": "Leo III the Isaurian",
     "birth_range": [685, 685],
     "death_range": [741, 741],
-    "category": ["emperor", "heretic"],
+    "category": ["emperor", "iconoclast"],
     "biography": "Byzantine emperor from 717 to 741 and the initiator of the imperial iconoclast policy. He began the first major phase of the controversy, opposed the veneration of icons, and removed Patriarch Germanus I after Germanus refused to support the imperial position.",
     "notes": "The precise origins and theological development of his iconoclasm remain debated; his policy was initially more limited and less systematically developed than that of his son Constantine V.",
     "p": 1
@@ -13,7 +13,7 @@ const people = [
     "name": "Constantine V",
     "birth_range": [718, 718],
     "death_range": [775, 775],
-    "category": ["emperor", "iconoclast_theologian", "heretic"],
+    "category": ["emperor", "iconoclast_theologian", "iconoclast"],
     "biography": "Emperor from 741 to 775 and the most important imperial architect of the first period of Byzantine iconoclasm. He developed an extensive theological case against icons, reorganized the episcopate in favor of iconoclasm, convened the Council of Hieria in 754, and conducted severe campaigns against iconophile clergy and monasticism.",
     "notes": "His official epithet 'Copronymus' was an iconophile insult and should not be treated as a neutral historical name.",
     "p": 1
@@ -31,7 +31,7 @@ const people = [
     "name": "Leo IV the Khazar",
     "birth_range": [750, 750],
     "death_range": [780, 780],
-    "category": ["emperor", "heretic"],
+    "category": ["emperor", "iconoclast"],
     "biography": "Emperor from 775 to 780 and son of Constantine V. He continued the official iconoclast policy but appears to have pursued a less aggressively persecutory policy than his father.",
     "notes": "His wife Irene later became the central imperial patron of the restoration of icons.",
     "p": 2
@@ -103,7 +103,7 @@ const people = [
     "name": "Leo V the Armenian",
     "birth_range": [775, 775],
     "death_range": [820, 820],
-    "category": ["emperor", "heretic"],
+    "category": ["emperor", "iconoclast"],
     "biography": "Emperor from 813 to 820 who initiated the second major phase of Byzantine iconoclasm after military defeats against the Bulgars. He removed the iconophile Patriarch Nikephoros and convened the iconoclast council of 815, which revived the policies of Hieria.",
     "notes": "His iconoclasm appears to have been influenced in part by the perceived connection between military success, divine favor, and the religious policies of earlier iconoclast emperors.",
     "p": 1
@@ -112,7 +112,7 @@ const people = [
     "name": "Theodotos I Kassiteras",
     "birth_range": [755, 760],
     "death_range": [821, 821],
-    "category": ["bishop", "heretic"],
+    "category": ["bishop", "iconoclast"],
     "biography": "Patriarch of Constantinople from 815 to 821, appointed by Leo V after the deposition of Patriarch Nikephoros. He presided over the renewed official iconoclast establishment and supported the decisions of the council of 815.",
     "notes": "He is sometimes called Theodotus I of Constantinople.",
     "p": 2
@@ -130,7 +130,7 @@ const people = [
     "name": "Theophilos",
     "birth_range": [813, 813],
     "death_range": [842, 842],
-    "category": ["emperor", "heretic"],
+    "category": ["emperor", "iconoclast"],
     "biography": "Emperor from 829 to 842 and the last major Byzantine emperor to enforce iconoclasm. He supported the iconoclast Patriarch John the Grammarian and conducted renewed persecution of iconophile monks and clergy.",
     "notes": "His death created the political opening that allowed the final restoration of icons under Theodora and Methodios.",
     "p": 2
@@ -139,7 +139,7 @@ const people = [
     "name": "John VII the Grammarian",
     "birth_range": [770, 780],
     "death_range": [860, 867],
-    "category": ["bishop", "heretic"],
+    "category": ["bishop", "iconoclast"],
     "biography": "A learned theologian and leading intellectual of the second iconoclast period who served as Patriarch of Constantinople from 837 to 843. He was a principal theological and ecclesiastical supporter of Emperor Theophilus and the iconoclast policy.",
     "notes": "His dates of birth and death are uncertain. He was deposed when icons were restored in 843.",
     "p": 2
@@ -148,7 +148,7 @@ const people = [
     "name": "Theodosius of Ephesus",
     "birth_range": [690, 720],
     "death_range": [760, 780],
-    "category": ["bishop", "heretic"],
+    "category": ["bishop", "iconoclast"],
     "biography": "Archbishop of Ephesus who presided over the Council of Hieria in 754 in the absence of a reigning Patriarch of Constantinople. He was one of the principal episcopal representatives of the first imperial iconoclast establishment.",
     "notes": "He should be distinguished from other bishops named Theodosius; precise biographical details are limited.",
     "p": 2
@@ -157,7 +157,7 @@ const people = [
     "name": "Anastasios of Constantinople",
     "birth_range": [680, 700],
     "death_range": [754, 754],
-    "category": ["bishop", "heretic"],
+    "category": ["bishop", "iconoclast"],
     "biography": "Patriarch of Constantinople from 730 until his death in 754. He succeeded the iconophile Germanus after Germanus's deposition and supported the imperial iconoclast policy of Leo III and Constantine V.",
     "notes": "He was the patriarch during the years in which iconoclasm developed into a formally defined imperial ecclesiastical policy.",
     "p": 2
@@ -166,7 +166,7 @@ const people = [
     "name": "Constantine of Nakoleia",
     "birth_range": [690, 720],
     "death_range": [750, 780],
-    "category": ["bishop", "heretic"],
+    "category": ["bishop", "iconoclast"],
     "biography": "Bishop of Nakoleia in Phrygia and one of the earliest known episcopal opponents of the veneration of icons. His objections contributed to the controversy that brought the issue before Patriarch Germanus and the imperial court.",
     "notes": "He is important as evidence that iconoclast arguments existed among bishops before the formal Council of Hieria.",
     "p": 2
@@ -176,7 +176,7 @@ const people = [
     "name": "Basil of Caesarea",
     "birth_range": [329, 330],
     "death_range": [379, 379],
-    "category": ["writer"],
+    "category": ["bishop", "writer"],
     "biography": "The Cappadocian Father whose writings and theological principles were cited by defenders of icons, especially regarding the relationship between the image and its prototype. His famous formulation that the honor given to the image passes to the prototype became especially important in the iconophile argument.",
     "notes": "His principle was frequently treated as a foundational patristic precedent for distinguishing the material image from the person represented.",
     "p": 2
@@ -185,7 +185,7 @@ const people = [
     "name": "Gregory of Nazianzus",
     "birth_range": [329, 330],
     "death_range": [389, 390],
-    "category": ["writer"],
+    "category": ["bishop", "writer"],
     "biography": "A major Cappadocian theologian whose sermons and theological writings were mined by the defenders of icons for testimony concerning the visibility and representation of Christ after the Incarnation.",
     "notes": "His writings were especially valuable to the iconophile case because of their Christological emphasis.",
     "p": 2
@@ -194,7 +194,7 @@ const people = [
     "name": "Gregory of Nyssa",
     "birth_range": [335, 340],
     "death_range": [394, 395],
-    "category": ["writer"],
+    "category": ["bishop", "writer"],
     "biography": "The Cappadocian theologian whose writings were cited in the icon controversy, particularly for the theological significance of the Incarnation and the relation between visible representation and invisible realities.",
     "notes": "His works were sometimes used in patristic florilegia rather than as a single central authority on icons.",
     "p": 2
@@ -203,7 +203,7 @@ const people = [
     "name": "John Chrysostom",
     "birth_range": [349, 350],
     "death_range": [407, 407],
-    "category": ["writer"],
+    "category": ["bishop", "writer"],
     "biography": "The celebrated preacher and Archbishop of Constantinople whose homilies and writings were cited by iconophiles as evidence for the continuity of Christian devotion, commemoration, and representation.",
     "notes": "He was an especially powerful authority in Constantinople because of his status as one of the city's most revered bishops.",
     "p": 2
@@ -212,7 +212,7 @@ const people = [
     "name": "Cyril of Alexandria",
     "birth_range": [375, 380],
     "death_range": [444, 444],
-    "category": ["writer"],
+    "category": ["bishop", "writer"],
     "biography": "The great Alexandrian theologian and defender of the unity of Christ's person whose Christological writings were important to the iconophile defense of depicting Christ. His theology helped establish the conceptual framework in which the visible human face of the incarnate Word could be represented without dividing Christ. His importance was principally Christological rather than based on a single famous treatise on icons.",
     "p": 2
   },
@@ -220,7 +220,7 @@ const people = [
     "name": "Athanasius of Alexandria",
     "birth_range": [296, 298],
     "death_range": [373, 373],
-    "category": ["writer"],
+    "category": ["bishop", "writer"],
     "biography": "The Alexandrian defender of Nicene Christianity whose writings were invoked by iconophiles for the theology of the Incarnation and the reality of the Word's assumption of visible human flesh. His writings provided an important theological background for the argument that the Incarnation made legitimate representation of Christ possible.",
     "p": 2
   },
@@ -228,7 +228,7 @@ const people = [
     "name": "John of Damascus",
     "birth_range": [675, 680],
     "death_range": [749, 749],
-    "category": ["writer", "authority"],
+    "category": ["writer", "monk"],
     "biography": "The most important early theological defender of icons. His Three Treatises Against Those Decrying the Holy Images argued that the Incarnation transformed the theological situation by making the invisible God visible in Christ, and that honor shown to an image passes to its prototype. His writings became central authorities for the iconophile position and were explicitly condemned by the iconoclast Council of Hieria.",
     "notes": "Although he belongs chronologically to the controversy itself, his major writings were produced during its first phase and he was already an established defender before the Council of Hieria.",
     "p": 1
@@ -237,7 +237,7 @@ const people = [
     "name": "Germanus I of Constantinople",
     "birth_range": [634, 640],
     "death_range": [733, 733],
-    "category": ["bishop", "authority", "writer"],
+    "category": ["bishop", "writer"],
     "biography": "Patriarch of Constantinople from 715 to 730 and one of the earliest major ecclesiastical defenders of icons against the imperial policy of Leo III. His letters and theological arguments were used by later iconophiles as evidence of the Church's traditional position. His writings, including letters to bishops and theological defenses of sacred images, were important precedents for later iconophile theology.",
     "p": 2
   },
@@ -245,7 +245,7 @@ const people = [
     "name": "Eusebius of Caesarea",
     "birth_range": [260, 265],
     "death_range": [339, 340],
-    "category": ["writer", "authority"],
+    "category": ["bishop", "writer"],
     "biography": "The fourth-century bishop and historian whose letter to Constantia, sister of Emperor Constantine, rejecting a request for an image of Christ became one of the most important patristic texts used by iconoclasts. His testimony was presented as evidence that early Christianity rejected images of Christ. His anti-image letter was vigorously contested by iconophiles, who argued that it reflected an incomplete pre-Nicene or pre-Chalcedonian understanding of the Incarnation rather than the Church's later orthodox Christology.",
     "p": 2
   },
@@ -261,7 +261,7 @@ const people = [
     "name": "Asterius of Amasea",
     "birth_range": [350, 360],
     "death_range": [410, 425],
-    "category": ["bishop"],
+    "category": ["bishop", "writer"],
     "biography": "A late-fourth- or early-fifth-century bishop whose homilies included criticism of certain forms of religious imagery. His writings were cited by iconoclasts as patristic evidence against the use of images in Christian devotion.  His criticism was directed within a broader pastoral and moral context and did not necessarily amount to the fully developed Byzantine iconoclast position.",
     "p": 2
   },
@@ -269,7 +269,7 @@ const people = [
     "name": "Nilus of Sinai",
     "birth_range": [350, 360],
     "death_range": [430, 430],
-    "category": ["writer", "authority"],
+    "category": ["writer", "monk"],
     "biography": "An ascetic author whose writings were cited in discussions of Christian images, especially in connection with the decoration of churches and the use of narrative scenes. His testimony was interpreted differently by the two sides.",
     "notes": "The attribution and interpretation of some relevant passages were matters of controversy.",
     "p": 3
@@ -278,7 +278,7 @@ const people = [
     "name": "Severus of Antioch",
     "birth_range": [465, 470],
     "death_range": [538, 538],
-    "category": ["writer"],
+    "category": ["bishop", "writer"],
     "biography": "A prominent non-Chalcedonian theologian whose writings were sometimes used in the iconoclast controversy as evidence concerning the limits of Christian representation and the relationship between Christological doctrine and images.",
     "notes": "His theological status was controversial in the Byzantine Church, and his writings were not treated as an unqualified authority by the iconophile side.",
     "p": 3
@@ -295,7 +295,7 @@ const people = [
     "name": "John of Jerusalem",
     "birth_range": [700, 720],
     "death_range": [760, 780],
-    "category": ["writer", "writer"],
+    "category": ["bishop", "writer"],
     "biography": "A theologian associated with the iconophile defense during the first iconoclast period whose writings were preserved and used in the broader theological debate over images.",
     "notes": "He should not be confused with John of Damascus; his identification and precise biography are less certain.",
     "p": 2
@@ -305,7 +305,7 @@ const people = [
     "name": "Andreas Karlstadt",
     "birth_range": [1486, 1486],
     "death_range": [1541, 1541],
-    "category": ["reformation_theologian", "heretic"],
+    "category": ["reformation_theologian", "iconoclast"],
     "biography": "An early Wittenberg reformer who became one of the most forceful advocates of removing religious images from churches. During the disturbances in Wittenberg in 1522, he argued that images encouraged idolatry and should be removed, contributing to the first major wave of Reformation-era iconoclasm.",
     "notes": "Karlstadt represents an early, radical form of Reformation iconoclasm and is especially useful for showing that Luther's position was not identical to that of the more radical reformers.",
     "p": 2
@@ -314,7 +314,7 @@ const people = [
     "name": "Ulrich Zwingli",
     "birth_range": [1484, 1484],
     "death_range": [1531, 1531],
-    "category": ["reformation_theologian", "heretic"],
+    "category": ["reformation_theologian", "iconoclast"],
     "biography": "The principal reformer of Zürich and one of the earliest major Protestant leaders to advocate the removal of religious images from churches. His preaching and influence helped produce the orderly removal of images from Zürich churches in 1524–1525 and influenced broader Reformed opposition to images in worship.",
     "notes": "Zwingli's iconoclasm was tied to his understanding of the Second Commandment and to a broader rejection of traditional Catholic devotional practices.",
     "p": 2
@@ -323,7 +323,7 @@ const people = [
     "name": "John Calvin",
     "birth_range": [1509, 1509],
     "death_range": [1564, 1564],
-    "category": ["reformation_theologian", "heretic"],
+    "category": ["reformation_theologian", "iconoclast"],
     "biography": "The principal theological architect of the Reformed tradition and a major opponent of religious images in Christian worship. In the Institutes of the Christian Religion, especially his treatment of the Second Commandment, he argued that images of God and the saints were incompatible with true worship and that images inevitably encouraged superstition and idolatry.",
     "notes": "Calvin's theology provided one of the most systematic Protestant arguments against religious images and helped shape iconoclastic policies in Geneva and other Reformed territories.",
     "p": 2
@@ -332,7 +332,7 @@ const people = [
     "name": "John Knox",
     "birth_range": [1514, 1514],
     "death_range": [1572, 1572],
-    "category": ["reformation_theologian", "heretic"],
+    "category": ["reformation_theologian", "iconoclast"],
     "biography": "The leading Scottish Reformer whose preaching and influence contributed to the destruction and removal of religious images during the Scottish Reformation of 1559–1560. He represented the spread of Reformed iconoclasm beyond Switzerland and France into the British Isles.",
     "notes": "Useful if the timeline is intended to show the geographical expansion of Reformed iconoclasm rather than only its principal theological originators.",
     "p": 2
@@ -384,7 +384,7 @@ const events = [
   {
     "name": "Roman Synod under Pope Gregory III",
     "time_range": [731, 731],
-    "category": ["synod"],
+    "category": ["council"],
     "description": "A synod held in Rome condemned those who rejected or destroyed sacred images and affirmed their proper use in Christian worship. It was an early formal ecclesiastical rejection of the iconoclast policy emerging under Emperor Leo III.",
     "p": 3
   },
@@ -398,35 +398,35 @@ const events = [
   {
     "name": "Council of Hieria",
     "time_range": [754, 754],
-    "category": ["non_council", "coercion"],
+    "category": ["iconoclast_council", "coercion"],
     "description": "Convened by Emperor Constantine V during the first period of Byzantine iconoclasm, this council assembled approximately 340 bishops to condemn the veneration of holy images. Its proceedings took place under intense imperial sponsorship and coercive political conditions, while the see of Constantinople was vacant after the forced resignation of the iconophile Patriarch Constantine II. The council therefore lacked the normal participation of the principal patriarchal see and was not received by the other ancient patriarchates. Although it presented itself as an ecumenical council and developed a serious Christological argument against icons, it attempted to overturn the Church's received practice and to condemn the defenders of images, including St. John of Damascus, without the universal reception of the Church. Its decrees were consequently rejected by the Orthodox Church, not because a council's numerical size or theological seriousness is irrelevant, but because an assembly acting under imperial coercion cannot by itself overturn the received faith of the Church.",
     "p": 2
   },
   {
     "name": "Second Council of Nicaea",
     "time_range": [787, 787],
-    "category": ["ecumenical_council"],
+    "category": ["council"],
     "description": "The Seventh Ecumenical Council repudiated the Council of Hieria, condemned iconoclasm, and affirmed the legitimacy of the veneration of holy images while distinguishing veneration from the worship owed to God alone. It also articulated criteria by which the ecumenical character of a council could be judged.",
     "p": 0
   },
   {
     "name": "Council of Frankfurt",
     "time_range": [794, 794],
-    "category": ["non_council", "misunderstanding"],
+    "category": ["iconoclast_council", "misunderstanding"],
     "description": "The Frankish bishops rejected the Second Council of Nicaea's teaching on sacred images, largely because its decisions had reached the Latin West through inaccurate translations and were understood to require the worship or adoration of images. The council therefore rejected what it believed to be the Byzantine position, while not abolishing Christian images or rejecting every form of honor shown to them. The resulting controversy illustrates how the mistranslation of the Greek distinction between the worship due to God alone and the veneration offered to holy persons and their images contributed to a temporary Western misunderstanding of the Orthodox position.",
     "p": 3
   },
   {
     "name": "Council of Constantinople under Leo V",
     "time_range": [815, 815],
-    "category": ["non_council", "coercion"],
+    "category": ["iconoclast_council", "coercion"],
     "description": "Convened under Emperor Leo V during the second period of Byzantine iconoclasm, this council revived the condemned teaching of Hieria and sought to overturn the decree of the Seventh Ecumenical Council, which had restored the veneration of holy images. Its appeal to antiquity could not make it a true council of the Church, for the Church does not receive a synod merely because bishops assemble at the emperor's command, nor does a later gathering acquire authority by reversing an already received conciliar judgment. The council's rejection of the Incarnation's consequences for sacred representation was therefore rejected, and the restoration of icons in 843 was understood as the restoration of the Church's received faith.",
     "p": 3
   },
   {
     "name": "Synod of Constantinople and Restoration of Icons",
     "time_range": [843, 843],
-    "category": ["ecumenical_council"],
+    "category": ["council"],
     "description": "After the death of the iconoclast Emperor Theophilus, Empress Theodora and Patriarch Methodius restored the veneration of icons and formally repudiated the iconoclast councils. The restoration was commemorated by the first Sunday of Great Lent, later known as the Sunday of Orthodoxy.",
     "p": 1
   },
@@ -512,7 +512,7 @@ const events = [
   {
     "name": "Westminster Confession",
     "time_range": [1646, 1647],
-    "category": ["non_council"],
+    "category": ["iconoclast_council"],
     "description": "The Westminster Assembly gave one of the most systematic expressions of the mature Reformed rejection of religious images, teaching that images of God and the Persons of the Trinity are forbidden and that religious worship must not be offered through images. The rejection of sacred images had now become a settled feature of a major Western Christian confession.",
     "p": 2
   }
