@@ -10,6 +10,7 @@ class Timeline
     this.svg = null;
     this.time_range = time_range;
     this.time_step = options?.time_step??10;
+    this.time_oob_cutoff = 10;
     this.top_to_bottom = true;
     this.timeline_y = 10;                       // distance from edge
     this.slot_height = 27;                      // height plus spacing
@@ -62,13 +63,13 @@ class Timeline
 
   draw_people()
   {
+    const l_limit = this.time_range[0] - this.time_oob_cutoff;
+    const r_limit = this.time_range[1] + this.time_oob_cutoff;
     let slot_end = [-10, 33];
     for (const person of people)
     {
         //if (! core_figures.includes(person.name))
         //  continue;
-        if (person.heretic)
-          continue;
         if (person.p > this.max_detail_level)
           continue;
         const el = document.createElement("span");
@@ -79,13 +80,12 @@ class Timeline
         {
           el.innerHTML += "<span class='x_martyr' title='martyr'></span>";
         }
-        const birth = (person.birth_range[0] + person.birth_range[1])/2;
+        let birth = (person.birth_range[0] + person.birth_range[1])/2;
         let death = (person.death_range[0] + person.death_range[1])/2;
-        const r_limit = this.time_range[1] + 10;
+        if (birth < l_limit)
+          birth = l_limit;
         if (death > r_limit)
-        {
           death = r_limit;
-        }
         var use_slot;
         for (use_slot=0; use_slot < slot_end.length; use_slot++)
         {
@@ -332,6 +332,18 @@ class Timeline
     }
   }
 
+  set_detail_level(new_level, upd_control)
+  {
+    if (upd_control)
+    {
+      // update control
+      const lvl = document.getElementById("detail_level");
+      lvl.value = this.max_detail_level;
+    }
+    // redraw
+    this.max_detail_level = parseInt(new_level);
+    this.draw();
+  }
   setup()
   {
     const ctl = document.getElementById("controls");
@@ -355,10 +367,12 @@ class Timeline
     lvl.value = this.max_detail_level;
     const self = this;
     lvl.addEventListener("input", function() {
-      // redraw
-      self.max_detail_level = parseInt(lvl.value);
-      self.draw();
+      self.set_detail_level(lvl.value, false);
     });
+    // buttons for scrolling
+    this.draw_scroll_buttons();
+    //
+    this.preserve_state_through_url();
   }
 
   visible_time_range()
@@ -367,11 +381,15 @@ class Timeline
     const range = this.div.clientWidth / this.pix_per_year;
     return [Math.max(first, this.time_range[0]), Math.min(first + range, this.time_range[1])];
   }
+  visible_time_range_mid()
+  {
+    const tr = this.visible_time_range();
+    return (tr[0] + tr[1])/2;
+  }
 
   draw()
   {
     const vis_range = this.visible_time_range();
-    console.log(vis_range);
     // erase
     this.div.innerText = "";
     // find actual max detail and change control's max
@@ -386,12 +404,27 @@ class Timeline
     for (const f in overrides)
       this[f] = overrides[f];
     // draw
+    this.draw_endcaps();
     this.draw_years();
     this.draw_people();
     this.draw_events();
     this.setup_selection();
     // restore position
     this.scroll_to_year((vis_range[0] + vis_range[1])/2, "instant");
+  }
+
+  draw_endcaps()
+  {
+    for (const cap_type of ["left", "right"])
+    {
+      const el = document.createElement("span");
+      el.classList.add("endcap_"+cap_type);
+      if (cap_type == "right")
+      {
+        el.style.left = (this.year_x(this.time_range[1] + this.time_oob_cutoff)) + "px";
+      }
+      this.div.appendChild(el);
+    }
   }
 
   scroll_to_year(year, behavior)
@@ -425,7 +458,13 @@ class Timeline
         const el = document.createElement("span");
         el.classList.add("item");
         el.innerText = item.title;
-        el.classList.add(item.class);
+        let classes;
+        if (typeof(item.class) == "string")
+          classes = [item.class];
+        else
+          classes = item.class;
+        for (const cls of classes)
+          el.classList.add(cls);
         if (item?.description)
           el.setAttribute("title", item.description)
         key.appendChild(el);
@@ -433,13 +472,69 @@ class Timeline
     }
   }
 
-}
+  draw_scroll_buttons()
+  {
+    const controls = document.getElementById("controls");
+    const self = this;
+    // left
+    controls.insertAdjacentHTML("beforeend"," &nbsp; Scroll: ");
+    let btn = document.createElement("button");
+    btn.innerText = "<";
+    btn.classList.add("scroll_button");
+    btn.addEventListener("click", (evt) => {
+      const incr = self.div.clientWidth/self.pix_per_year * 0.6;
+      self.scroll_to_year(self.visible_time_range_mid() - incr)
+    });
+    controls.appendChild(btn);
+    // right
+    btn = document.createElement("button");
+    btn.innerText = ">";
+    btn.classList.add("scroll_button");
+    btn.addEventListener("click", (evt) => {
+      const incr = self.div.clientWidth/self.pix_per_year * 0.6;
+      self.scroll_to_year(self.visible_time_range_mid() + incr)
+    });
+    controls.appendChild(btn);
+  }
 
-/*  TODOs
- *
- *    edit all AI-generated bios
- *    filter buttons, i.e. for heretics, apostles, writers, martyrs, ...
- *    try different timelines:
- *      iconoclasm
- *      roman divergence, west in perspective
- */
+  preserve_state_through_url()
+  {
+    const ctl_detail_level = document.getElementById("detail_level");
+    const self = this;
+    // URL hash change -> properties
+    function apply_hash_to_timeline()
+    {
+      const hash = window.location.hash;
+      if (! /#\d+_\d+/.test(hash))
+        return;
+      const parts = hash.substr(1).split("_");
+      const detail_level = parseInt(parts[0]);
+      const scroll_year = parseInt(parts[1]);
+      self.set_detail_level(detail_level);
+      self.scroll_to_year(scroll_year, "instant");
+    }
+    // - when page loads
+    window.addEventListener("load", apply_hash_to_timeline);
+    // - when user actions (i.e. history) change the hash
+    window.addEventListener("hashchange", apply_hash_to_timeline);
+    // changed properties -> URL hash
+    function do_hash_change()
+    {
+      // property change -> url
+      const year_mid = Math.round(self.visible_time_range_mid());
+      const new_hash = `${ctl_detail_level.value}_${year_mid}`;
+      // (this avoids triggering hash change)
+      history.replaceState(null, null, '#' + new_hash);
+    }
+    let change_timer = 0;
+    function request_hash_change()
+    {
+      if (change_timer)
+        window.clearTimeout(change_timer);
+      change_timer = window.setTimeout(do_hash_change, 1000);
+    }
+    ctl_detail_level.addEventListener("input", request_hash_change);
+    this.div.addEventListener("scroll", request_hash_change);
+  }
+
+}

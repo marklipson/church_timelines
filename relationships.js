@@ -555,7 +555,7 @@ const relationships = [
   {
     "from": "Peter",
     "to": "Mark",
-    "relationship": "spiritual_father_and_associate",
+    "relationship": "teacher_to_disciple",
     "church": "Rome",
     "relationship_confidence": "high",
     "basis": "early_church_tradition",
@@ -564,7 +564,7 @@ const relationships = [
   {
     "from": "Paul",
     "to": "Timothy",
-    "relationship": "spiritual_father_and_apostolic_delegate",
+    "relationship": "teacher_to_disciple",
     "church": "Ephesus / Eastern Mediterranean",
     "relationship_confidence": "high",
     "basis": "New_Testament",
@@ -573,7 +573,7 @@ const relationships = [
   {
     "from": "Paul",
     "to": "Titus",
-    "relationship": "spiritual_father_and_apostolic_delegate",
+    "relationship": "teacher_to_disciple",
     "church": "Crete / Eastern Mediterranean",
     "relationship_confidence": "high",
     "basis": "New_Testament",
@@ -618,7 +618,7 @@ const relationships = [
   {
     "from": "Paul",
     "to": "Onesimus",
-    "relationship": "spiritual_father_and_pastoral_relationship",
+    "relationship": "teacher_to_disciple",
     "church": "Colossae",
     "relationship_confidence": "high",
     "basis": "New_Testament",
@@ -722,20 +722,11 @@ const relationships = [
   {
     "from": "Demetrius of Thessalonica",
     "to": "Nestor of Thessalonica",
-    "relationship": "spiritual_father_and_disciple",
+    "relationship": "teacher_to_disciple",
     "church": "Thessalonica",
     "relationship_confidence": "medium",
     "basis": "early_hagiographic_tradition",
     "description": "Nestor is traditionally portrayed as receiving spiritual instruction and encouragement from Demetrius before his martyrdom."
-  },
-  {
-    "from": "Constantine the Great",
-    "to": "Athanasius of Alexandria",
-    "relationship": "imperial_contemporary_and_church_leader",
-    "church": "Alexandria / Roman Empire",
-    "relationship_confidence": "high",
-    "basis": "historical",
-    "description": "Athanasius became a major ecclesiastical figure during Constantine's reign and participated in the Nicene controversy."
   },
   {
     "from": "Alexander of Alexandria",
