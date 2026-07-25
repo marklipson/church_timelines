@@ -12,7 +12,7 @@ body {
 }
 h1 {
   margin: 0;
-  padding: 8px;
+  padding: 19px;
   flex-grow: 0;
   background-color: #d0d0d6;
   color: #606060;
@@ -23,8 +23,12 @@ h1 {
 .key {
   position: absolute;
   top: 20px;
-  right: 20px;
+  right: 22px;
   font-size: 13px;
+  max-width: 40%;
+}
+.key .item {
+  white-space: nowrap;
 }
 .key span.title {
   line-height: 170%;
@@ -53,6 +57,25 @@ h1 {
   position: absolute;
   border-radius: 4px;
 }
+#timeline_area > span.endcap_left {
+  top: 0;
+  bottom:0;
+  left: 0;
+  width: 15px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: linear-gradient(to right,#b0b0b0 0%, rgba(255, 255, 3, 0) 100%);
+  border-radius: 0;
+}
+#timeline_area > span.endcap_right {
+  top: 0;
+  bottom: 0;
+  width: 10px;
+  border: none;
+  background: linear-gradient(to left,#b0b0b0 0%, rgba(255, 255, 3, 0) 100%);
+  border-radius: 0;
+}
 .time_axis {
   font-weight: bold;
   transform: translateX(-50%);
@@ -72,13 +95,16 @@ h1 {
 .cat_emperor {
   background-color: #a0b8f0;
 }
+.cat_emperor.cat_persecutor {
+  background-color: #903838;
+}
 .cat_apostle {
   background-color: #d4ebff;
 }
 .cat_evangelist {
   background-color: #fcfada;
 }
-.cat_iconoclast {
+.cat_iconoclast, .cat_heretic {
   background-color: #806060;
   color: #ffc0c0;
 }
@@ -192,7 +218,7 @@ h1 {
   background-color: #601818;
   color: #eee;
 }
-.event.cat_history {
+.cat_history {
   background-color: #606060;
 }
 .detail_pane {
@@ -220,4 +246,11 @@ h1 {
   float: right;
   margin: 0 0 8px 8px;
   border: solid 2px #e0e0d0;
+}
+.scroll_button {
+  margin: 2px;
+  font-size: 30px;
+  padding: 0 16px;
+  line-height: 95%;
+  font-weight: bold;
 }

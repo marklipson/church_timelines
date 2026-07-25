@@ -17,6 +17,9 @@
           color: #e0e0e0;
           background-color: #809020;
         }
+        .cat_history, .cat_persecution-light {
+          color: #e0e0e0;
+        }
     </style>
 </head>
 <body>
@@ -33,14 +36,17 @@
       {"text": "people:"},
       {"item": {title: "apostle", class: "cat_apostle", description: "The 12 apostles (see also: evangelists)"}},
       {"item": {title: "evangelist", class: "cat_evangelist", description: "The writers of the 4 gospels"}},
-      {"item": {title: "martyr", class: "x_martyr", description: "Those who died for Christ (and Christ Himself)"}},
+      {"item": {title: "martyr", class: "x_martyr", description: "Those who died for Christ"}},
       {"item": {title: "bishop", class: "cat_bishop", description: "Bishops and patriarchs"}},
       {"item": {title: "monk", class: "cat_monk", description: "Monastics"}},
       {"item": {title: "writer", class: "cat_writer", description: "People with surviving writings"}},
-      {"item": {title: "emperor/empress", class: "cat_emperor", description: "Emperors and empresses of Byzantium"}},
+      {"item": {title: "rulers", class: "cat_emperor", description: "Emperors and empresses of Byzantium"}},
+      {"item": {title: "ruler-persecutors", class: ["cat_emperor", "cat_persecutor"], description: "Emperors who actively persecuted the Church"}},
+      {"item": {title: "heretics", class: "cat_heretic", description: "Instigators of heresy or schism."}},
       {"text": "<br>events:"},
       {"item": {title: "persecutions", class: "cat_persecution-light", description: "Mass killings of Christians."}},
-      {"item": {title: "council", class: "cat_council", description: "Church councils."}},
+      //{"item": {title: "biblical", class: "cat_divine", description: "Biblical events."}},
+      {"item": {title: "councils", class: "cat_council", description: "Church councils."}},
       {"item": {title: "other", class: "cat_history", description: "Other historical events."}},
     ]
   );
