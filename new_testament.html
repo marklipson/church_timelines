@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Emergence of the New Testament from the Early Church</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: arial, helvetica, sans-serif;
+      }
+      h1 {
+        margin: 0;
+        font-size: 24px;
+        padding: 8px;
+        text-align: center;
+        background: #bbd0d7;
+        border-bottom: solid 2px #b0c0d0;
+      }
+      .books {
+        position: fixed;
+        top: 46px;
+        right: 0;
+        width: max(20%, 150px);
+        bottom: 0;
+        height: auto;
+        padding: 0 4px 4px 4px;
+        display: flex;
+        flex-direction: column;
+        background: #a0a080;
+        border-left: solid 3px #808060;
+      }
+      .books .title {
+        font-size: clamp(1svh, 2.1svh, 3vh);
+        text-align: center;
+        margin: 0;
+        padding: 8px;
+        font-weight: bold;
+        color: #606060;
+        flex-grow: 0;
+        background: #a0a090;
+        border-bottom: solid 2px #808050;
+      }
+      .books .section-title {
+        font-size: clamp(1svh, 2.1svh, 3vh);
+        margin: 8px 0 0 0;
+        font-weight: bold;
+        color: #808040;
+        flex-grow: 0;
+      }
+      .books .item {
+        font-size: clamp(1svh, 1.8svh, 3vh);
+        margin: 1px 0 1px 0;
+        padding: 2px;
+        border: solid 0.5pt #808080;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        min-height: 0;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-wrap: nowrap;
+      }
+      .now {
+        position: fixed;
+        left: 4px;
+        width: calc(80% - 30px);
+        top: 50vh;
+        height: 8px;
+        background: #e08080;
+        z-index: 2;
+        opacity: 0.35;
+      }
+      .now::after {
+        content: "";
+        position: absolute;
+        right: -8px;
+        bottom: -15px;
+        border-width: 20px 0 20px 12px;
+        border-style: solid;
+        border-color: transparent transparent transparent  #e08080;
+      }
+      .story {
+        background: #e0e0e0;
+        position: fixed;
+        top: 46px;
+        bottom: 0;
+        left: 0;
+        overflow-y: auto;
+        font-size: 18px;
+        margin: 0 24px;
+        width: calc(80% - 70px);
+        z-index: 1;
+      }
+      .story .margin {
+        height: calc(47vh - 38px);
+        color: #a0a0b0;
+        position: relative;
+        top: 10vh;
+        left: calc((80% - 70px)*0.2);
+        width: calc((80% - 70px)*0.8);
+        font-style: italic;
+        font-size: 120%;
+      }
+      .story .part {
+        background: #f0f0f0;
+        margin: 24px 0;
+        border: solid 1px #c0c0c0;
+        padding: 6px;
+        line-height: 130%;
+      }
+      .part .title {
+        color: #808000;
+        font-weight: bold;
+        margin-bottom: 6px;
+      }
+      .part .years {
+        color: #404000;
+        font-weight: bold;
+      }
+    </style>
+</head>
+<body>
+  <h1>The New Testament Emerges from the Early Church</h1>
+  <div class="now"></div>
+  <div class="books">
+      <div class="title">New Testament Books</div>
+      <div class="section-title">Gospels</div>
+      <div class="item" data-wr="40-70" data-circ="75-90">Matthew</div>
+      <div class="item" data-wr="40-70" data-circ="70-85">Mark</div>
+      <div class="item" data-wr="58-60" data-circ="75-90">Luke</div>
+      <div class="item" data-wr="90-100" data-circ="95-115">John</div>
+
+      <div class="section-title">History</div>
+      <div class="item" data-wr="62-62" data-circ="75-90">Acts of the Apostles</div>
+
+      <div class="section-title">Pauline Epistles</div>
+      <div class="item" data-wr="57-58" data-circ="65-80">Romans</div>
+      <div class="item" data-wr="54-56" data-circ="60-70">1 Corinthians</div>
+      <div class="item" data-wr="55-56" data-circ="60-75">2 Corinthians</div>
+      <div class="item" data-wr="48-49" data-circ="55-70">Galatians</div>
+      <div class="item" data-wr="60-62" data-circ="70-80">Ephesians</div>
+      <div class="item" data-wr="61-62" data-circ="70-80">Philippians</div>
+      <div class="item" data-wr="60-62" data-circ="70-80">Colossians</div>
+      <div class="item" data-wr="50-51" data-circ="55-65">1 Thessalonians</div>
+      <div class="item" data-wr="51-52" data-circ="55-70">2 Thessalonians</div>
+      <div class="item" data-wr="64-66" data-circ="75-90">1 Timothy</div>
+      <div class="item" data-wr="66-67" data-circ="75-90">2 Timothy</div>
+      <div class="item" data-wr="64-66" data-circ="75-90">Titus</div>
+      <div class="item" data-wr="60-62" data-circ="75-90">Philemon</div>
+      <div class="item" data-wr="63-67" data-circ="80-100">Hebrews</div>
+
+      <div class="section-title">General Epistles</div>
+      <div class="item" data-wr="45-48" data-circ="60-80">James</div>
+      <div class="item" data-wr="63-64" data-circ="70-85">1 Peter</div>
+      <div class="item" data-wr="64-67" data-circ="100-130">2 Peter</div>
+      <div class="item" data-wr="88-92" data-circ="95-115">1 John</div>
+      <div class="item" data-wr="88-92" data-circ="110-140">2 John</div>
+      <div class="item" data-wr="88-92" data-circ="110-140">3 John</div>
+      <div class="item" data-wr="65-68" data-circ="80-105">Jude</div>
+
+      <div class="section-title">Prophecy</div>
+      <div class="item" data-wr="95-96" data-circ="100-120">Revelation</div>
+
+  </div>
+  <div class="story">
+      <div class="margin" data-time="10-30">
+          The first 100 years of the Church are described below, and the books of the New
+          Testament are shown on the right.  As you scroll down through the history you will
+          see the Gospels and Epistles filling in.  The name of each book darkens when it has
+          been written, and the background brightens as it is circulated among the churches.
+      </div>
+      <div class="part" data-time="30-40">
+          <div class="title">AD 30-40</div>
+          <span class="years">30:</span>
+          Pentecost, the Holy Spirit descends upon the Apostles, about 3000 are baptized.<br/>
+          <span class="years">30-32:</span>
+          The Apostles preach and heal in Jerusalem, establishing the first Christian community around Jesus's teachings.<br/>
+          <span class="years">31-34:</span>
+          The Hellenist controversy takes place and the seven deacons are appointed.  St Stephen (one of the seven) is martyred.<br/>
+          <span class="years">32-36:</span>
+          Persecution in Jerusalem sends the disciples beyond Judea.  Philip evangelizes Samaria and the coastal region.<br/>
+          <span class="years">36-43:</span>
+          Saul of Tarsus encounters the risen Christ on the road to Damascus, repents, and spends the next several years in comparatively quiet preparation.<br/>
+          <span class="years">33-40:</span>
+          The Gospel reaches Damascus, Phoenicia, Cyprus, Antioch, and other Gentile regions; Antioch becomes a major center of the Church.<br/>
+          <span class="years">35-40:</span>
+          Peter's ministry expands beyond Jerusalem; the household of Cornelius is received.
+      </div>
+      <div class="part" data-time="40-50">
+          <div class="title">AD 40-50</div>
+          <span class="years">41-44</span>
+          Paul and Barnabus in Antioch, where the disciples are 'first called Christians'.<br/>
+          <span class="years">44</span>
+          Herod Agrippa I executes James the son of Zebedee, the first of the Twelve to suffer martyrdom.<br/>
+          <span class="years">44-46</span>
+          Peter is imprisoned by Herod Agrippa, is miraculously released, and departs Jerusalem.<br/>
+          <span class="years">46-49</span>
+          Paul and Barnabas take their first major missionary journey through Cyprus and Asia Minor, establishing churches and appointing elders/bishops.<br/>
+          <span class="years">48-51</span>
+          The controversy over circumcision and the reception of Gentiles leads to the Council of Jerusalem: Gentile converts are not required to become Jews.<br/>
+      </div>
+      <div class="part" data-time="50-60">
+          <div class="title">AD 50-60</div>
+          <span class="years">49-52</span>
+          Paul's second missionary journey to Macedonia and Greece; churches are established at Philippi, Thessalonica, Berea, Corinth, and elsewhere.<br/>
+          <span class="years">50-55</span>
+          The Church becomes increasingly Gentile in composition while remaining rooted in the Apostolic Church of Jerusalem.<br/>
+          <span class="years">50-52</span>
+          Paul spends much time at Corinth; the Corinthian church becomes a prominent Christian community.<br/>
+          <span class="years">51-52</span>
+          Paul's earliest surviving letters, 1 and 2 Thessalonians, are written.<br/>
+          <span class="years">53-57</span>
+          Paul's third missionary journey strengthens the churches of Asia Minor and Greece; Ephesus becomes a major center of Christian teaching and mission.<br/>
+          <span class="years">54-58</span>
+          Paul writes major letters including Galatians, 1–2 Corinthians, and Romans.<br/>
+          <span class="years">57-59</span>
+          Paul returns to Jerusalem with the collection for the poor; he is arrested in the Temple and imprisoned under Roman authority.<br/>
+          <span class="years">59-60</span>
+          Paul appeals to Caesar and is taken to Rome.<br/>
+      </div>
+      <div class="part" data-time="60-70">
+          <div class="title">AD 60-70</div>
+          <span class="years">60-62</span>
+          Paul lives under house arrest in Rome.<br/>
+          <span class="years">60-65</span>
+          Paul's later letters are written; Christian communities are increasingly established across the Roman world.<br/>
+          <span class="years">62</span>
+          James the brother of the Lord, bishop of Jerusalem, is put to death.<br/>
+          <span class="years">62-68</span>
+          Peter and Paul are martyred during the reign of Nero.<br/>
+          <span class="years">64-68</span>
+          Nero's persecution of Christians in Rome follows the great fire.<br/>
+          <span class="years">65-70</span>
+          The Apostolic generation begins passing away, while bishops, presbyters, deacons, and local churches carry forward the Apostles' teaching.<br/>
+          <span class="years">66-70</span>
+          The Jewish War (66-73) and destruction of Jerusalem (70).  Before the Roman siege, the Christians of Jerusalem withdraw to Pella in the Decapolis, returning afterward for a time.<br/>
+      </div>
+      <div class="part" data-time="70-90">
+          <div class="title">AD 70-90</div>
+          The Church continues evangelizing across Syria, Asia Minor, Greece, Egypt, Rome, and beyond.<br/>
+          According to tradition, Thomas: India and the East; Andrew: Scythia and Greece; Mark: Egypt; Bartholomew: Armenia and the East; Matthew: Ethiopia and the East; Philip: Phrygia; Simon the Zealot: Persia; Jude (Thaddeus): Mesopotamia and Persia; Matthias: Judea and Ethiopia.<br/>
+          The Gospel is increasingly preserved in written form alongside the living apostolic tradition.  The Gospels and apostolic writings begin to circulate among the churches.<br/>
+          The Apostle John becomes associated especially with Ephesus and the churches of Asia Minor.<br/>
+      </div>
+      <div class="part" data-time="90-110">
+          <div class="title">AD 90-110</div>
+          <span class="years">90-100</span>
+          The Didache, an apostolic manual for early churches around Antioch, is written.<br/>
+          <span class="years">90-96</span>
+          Persecution under Domitian takes place in parts of the Empire.<br/>
+          <span class="years">95-96</span>
+          The Book of Revelation is written.<br/>
+          <span class="years">96-100</span>
+          The Church of Rome writes 1 Clement to the Corinthians, appealing to the Apostles Peter and Paul and their successors.<br/>
+          <span class="years">98-103</span>
+          The Apostle John dies.  End of the Apostolic Age.  The generation personally instructed by the Apostles increasingly assumes leadership: bishops, presbyters, deacons, teachers, confessors, and martyrs preserve the received faith.<br/>
+          <span class="years">107</span>
+          Ignatius of Antioch is arrested and taken to Rome; on the journey he writes letters to several churches, which give insight into the traditions received from the Apostles.<br/>
+      </div>
+      <div class="part" data-time="110-140">
+          <div class="title">AD 110-140</div>
+          <span class="years">110-130</span>
+          Papias of Hierapolis gathers and preserves traditions concerning the Apostles and their disciples.<br/>
+          <span class="years">110-125</span>
+          The letters of Pliny the Younger and Emperor Trajan describe Christians as a visible and growing population in Roman provincial society, with established patterns of worship and communal life.<br/>
+          <span class="years">112-117</span>
+          Trajan's policy toward Christians establishes the pattern of persecution for the next century: Christians are not to be actively hunted, but those formally accused and refusing to renounce Christ may be punished.<br/>
+          <span class="years">115-125</span>
+          Christian communities continue to multiply throughout Asia Minor, Syria, Egypt, Greece, Italy, and North Africa, while maintaining close bonds through letters, travelers, teachers, and shared apostolic tradition.<br/>
+          <span class="years">120-140</span>
+          Early forms of Gnostic teaching and other rival interpretations of Christianity appear.<br/>
+          <span class="years">124-130</span>
+          Quadratus and Aristides offer early defenses of Christianity to the Roman world.<br/>
+          <span class="years">130-140</span>
+          Justin Martyr becomes a prominent Christian teacher and apologist in Rome.<br/>
+          <span class="years">132-135</span>
+          Bar Kokhba revolt: Jews are barred from Jerusalem, the Church there is displaced, and the bishopric passes to Gentile Christians under Marcus.<br/>
+  </div>
+  <div class="margin" data-time="10-30"></div>
+</div>
+<script>
+  function element_total_height(element)
+  {
+    const height = element.offsetHeight;
+    const style = window.getComputedStyle(element);
+    const marginTop = parseFloat(style.marginTop);
+    const marginBottom = parseFloat(style.marginBottom);
+    return height + marginTop + marginBottom;
+  }
+
+  function parse_time_range(tr)
+  {
+    let r = tr.split('-');
+    return [parseInt(r[0]), parseInt(r[1])];
+  }
+
+  const el_books = document.getElementsByClassName("books")[0];
+  const el_story = document.getElementsByClassName("story")[0];
+  const el_now = document.getElementsByClassName("now")[0];
+  function year_from_scroll()
+  {
+    let y = el_story.scrollTop + el_story.clientHeight/2;
+    let h = el_story.scrollHeight;
+    const margin_h = document.getElementsByClassName("margin")[0].clientHeight;
+    y -= margin_h;
+    h -= 2*margin_h;
+    let last_t = 0;
+    for (const part of document.getElementsByClassName("part"))
+    {
+      // NOTE: the '28' here is a complete hack
+      const p_h = element_total_height(part) - 28;
+      const p_range = parse_time_range(part.getAttribute("data-time"));
+      if (y < p_h)
+        return p_range[0] + (y/p_h) * (p_range[1] - p_range[0]);
+      y -= p_h;
+      last_t = p_range[1];
+    }
+    return last_t;
+  }
+
+  function update_books()
+  {
+    const year = year_from_scroll();
+    for (const book of document.getElementsByClassName("item"))
+    {
+      const written = parse_time_range(book.getAttribute("data-wr"));
+      const wr_mid = (written[0] + written[1])/2;
+      if (year < written[0])
+      {
+        // not written
+        book.style.fontWeight = "normal";
+        book.style.opacity = 0.5;
+        book.style.color = "#606060";
+      }
+      else if (year < written[1])
+      {
+        // maybe written
+        book.style.fontWeight = "bold";
+        book.style.opacity = 0.5 + 0.5 * (year - written[0]) / (written[1] - written[0]);
+        book.style.color = "#303030";
+      }
+      else
+      {
+        // definitely written
+        book.style.fontWeight = "bold";
+        book.style.opacity = 1;
+        book.style.color = "#000000";
+      }
+      const circulated = parse_time_range(book.getAttribute("data-circ"));
+      let level = 0;
+      if (year < circulated[0])
+      {
+        // 0-25% circulated
+        level = 0.25 * (year - wr_mid) / (circulated[0] - wr_mid);
+        if (level < 0)
+          level = 0;
+      }
+      else if (year < circulated[1])
+      {
+        // 25-75% circulation
+        level = 0.25 + 0.50 * (year - circulated[0]) / (circulated[1] - circulated[0]);
+      }
+      else
+      {
+        // 75%+ circulated
+        level = 0.75 + 0.25 * (year - circulated[1]) / (circulated[1] - circulated[0]);
+        if (level > 1)
+          level = 1;
+      }
+      book.style.backgroundColor = `rgb(160, ${160+level*64}, 128)`;
+    }
+  }
+
+  el_story.addEventListener("scroll", function(evt){
+    update_books();
+  });
+  update_books();
+
+</script>
+</body>
+</html>
